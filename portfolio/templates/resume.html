@@ -1,6 +1,8 @@
+{% load static %}
+
 <!DOCTYPE html>
     <head>
-        <link rel="stylesheet" href="static/css/resume_style.css">
+        <link rel="stylesheet" href="{% static 'css/resume_style.css' %}">
         <title>Grace Hayden</title>
     </head>
     <body>
@@ -10,6 +12,8 @@
             Austin, TX <br />
         </div>
 
+        <hr />
+
         <div id="resume_title">
             <h1>Software Developer</h1>
             <p>I am looking for a challenging and constructive environment to continue
@@ -17,26 +21,43 @@
               with the use of my skills as a developer.</p>
         </div>
 
+        <hr />
 
        <div class="section_heading">Skills / Expertise :</div>
-       <ul>
-         <li>Python with expertise in Django </li>
-         <li>Effective UI via Accessible HTML/CSS </li>
-         <li>Extensive experience with PyPE and UT Dev Tools </li>
-         <li>SQL and Oracle </li>
-         <li>Professional writing with expertise in Grant Proposals </li>
-         <li>Effective Client/Customer communication </li>
-         <li>Stewardship </li>
-         <li>Server Maintenance </li>
-         <li>Teamwork and collaboration</li>
-         <li>JavaScript</li>
-       </ul>
+       <div class="column1">
+         <ul>
+           <li>Python with expertise in Django </li>
+           <li>Effective UI via Accessible HTML/CSS </li>
+           <li>Extensive experience with PyPE and UT Dev Tools </li>
+           <li>SQL and Oracle </li>
+           <li>Professional writing with expertise in Grant Proposals </li>
+         </ul>
+       </div>
+       <div class="column2">
+         <ul>
+           <li>Effective Client/Customer communication </li>
+           <li>Stewardship </li>
+           <li>Server Maintenance </li>
+           <li>Teamwork and collaboration</li>
+           <li>JavaScript</li>
+         </ul>
+       </div>
 
        <div class="section_heading">Experience:</div>
 
        <div class="job_details">
+          <b>Dell Technologies</b><br />
+          Web Developer (01/2019 - present) <br />
+       </div>
+       <ul class="job_duties">
+         <li>Assist in development required for customized managed deployment</li>
+         <li>Develop within cloud-based SaaS</li>
+         <li>Work with project managers to determine technical resolutions for system maintenance </li>
+       </ul>
+
+       <div class="job_details">
           <b>University of Texas (International Office) </b><br />
-          Senior Software Developer/Analyst (03/2018 - present) <br />
+          Senior Software Developer/Analyst (03/2018 - 01/2019) <br />
        </div>
        <ul class="job_duties">
          <li>Maintenance of database, UI and system design, and extensive stewardship.</li>
@@ -47,7 +68,7 @@
        </ul>
 
        <div class="job_details">
-         <b>University of Texas (Office of the Registrar)</b>
+         <b>University of Texas (Office of the Registrar)</b><br />
          Software Developer/Analyst (03/2016 - 03/2018)
        </div>
        <ul class="job_duties">
@@ -60,7 +81,7 @@
        </ul>
 
        <div class="job_details">
-         <b>East Austin College Prep</b>
+         <b>East Austin College Prep</b><br />
          Special Education Teacher and Science Tutor (01/2014 - 08/2015)
        </div>
        <ul class="job_duties">

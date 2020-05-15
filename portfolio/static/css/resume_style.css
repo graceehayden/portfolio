@@ -1,5 +1,23 @@
-#contact_info {
+body {
+  width: 80%;
+  margin-left: 10%;
+  background-color: #f1e9ef;
+  border: 2px solid #2e1114;
+  padding: 5px 5px 5px 5px;
+}
 
+h1 {
+  color:#2e1114;
+
+}
+
+hr {
+  color: #83677b;
+}
+
+#contact_info {
+  font-weight: bold;
+  font-size: 16px;
 }
 
 #resume_title {
@@ -9,8 +27,25 @@
 
 .section_heading {
   font-weight: bold;
+  color:#652a52;
+  font-size: 18px;
+  display: block;
+  clear: left;
+  margin-bottom: 10px;
 }
+
+.column1 {
+  float: left;
+  width: 50%;
+  display: inline;
+}
+.column2 {
+  float: left;
+  width: 50%;
+}
+
 
 .job_details .job_duties {
   margin-left: 10%;
+  font-size: 14px;
 }
