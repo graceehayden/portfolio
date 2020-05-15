@@ -7,4 +7,5 @@ urlpatterns = [
     path('post_list', views.post_list, name='post_list'),
     path('resume', views.resume, name='resume'),
     path('hello_pallet', views.hello_pallet, name='hello_pallet'),
+    path('error', views.error, name='error')
 ] + staticfiles_urlpatterns()

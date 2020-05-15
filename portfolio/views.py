@@ -1,6 +1,7 @@
-from django.shortcuts import render
+from django.shortcuts import render, render_to_response
 from django.utils import timezone
 from .models import Post
+from django.template import RequestContext
 
 
 def coming_soon(request):
@@ -8,12 +9,31 @@ def coming_soon(request):
 
 
 def hello_pallet(request):
-    return render(request, 'hello_pallet.html', {})
+    posts = Post.objects.order_by('published_date')
+    return render(request, 'hello_pallet.html', {'posts': posts})
 
 
 def resume(request):
     return render(request, 'resume.html', {})
 
+
+def error(request):
+    return render(request, 'error.html', {})
+
+
+
+#def handler404(request, *args, **argv):
+#    response = render_to_response('error.html', {},
+#                                  context_instance=RequestContext(request))
+#    response.status_code = 404
+#    return response
+
+
+# def handler500(request, *args, **argv):
+#    response = render_to_response('error.html', {},
+#                                  context_instance=RequestContext(request))
+#    response.status_code = 500
+#    return response
 
 def post_list(request):
     posts = Post.objects.filter(published_date__lte=timezone.now()).order_by('published_date')

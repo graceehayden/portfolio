@@ -47,9 +47,18 @@
     <div class="bgimg">
       <div class="middle">
         <h2>Prepare to be famous!</h2>
-        <hr>
-        <p id="demo"></p>
-      </div>
+        <hr />
+
+        {% for post in posts %}
+          <div style="background-color: white;">
+            <h3>{{ post.title }}</h3>
+            <p style="text-align: left;">{{ post.created_date }}</p>
+
+            <p style="text-align: left;">{{ post.text }}</p>
+          </div>
+        {% endfor %}
+
+        </div>
       </div>
   </body>
 </body>
