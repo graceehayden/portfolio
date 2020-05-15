@@ -1,3 +1,5 @@
+{% load static %}
+
 <!doctype html>
 
 <html lang="en">
@@ -6,12 +8,49 @@
 
   <title>Hello, Pallet!</title>
 
-  <link rel="stylesheet" href="css/coming_soon.css">
+  <style>
+    hr {
+        margin: auto;
+        width: 40%;
+    }
 
-  <h2>Time to be famous!</h2>
+    h2 {
+      color: white;
+    }
+    body, html {
+     height: 100%;
+    }
+
+    .bgimg {
+        height: 100%;
+        background-image: url("{% static 'images/tums_up.png' %}");
+        background-position: center;
+        background-size: cover;
+        position: relative;
+        font-family: "Courier New", Courier, monospace;
+        font-size: 25px;
+    }
+
+    .middle {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        text-align: center;
+    }
+  </style>
+
 </head>
 
 <body>
-  <script></script>
+  <body>
+    <div class="bgimg">
+      <div class="middle">
+        <h2>Prepare to be famous!</h2>
+        <hr>
+        <p id="demo"></p>
+      </div>
+      </div>
+  </body>
 </body>
 </html>
