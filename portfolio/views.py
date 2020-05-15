@@ -7,6 +7,10 @@ def coming_soon(request):
     return render(request, 'coming_soon.html', {})
 
 
+def hello_pallet(request):
+    return render(request, 'hello_pallet.html', {})
+
+
 def resume(request):
     return render(request, 'resume.html', {})
 

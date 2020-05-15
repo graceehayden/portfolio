@@ -1,8 +1,11 @@
+{% load static %}
 <!DOCTYPE html>
+
 <head>
     <title>International Grace Station</title>
     <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
     <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css">
+    <link rel="stylesheet" href="{% static 'css/coming_soon.css' %}">
 </head>
 
 <style>
@@ -17,7 +20,7 @@
 
   .bgimg {
       height: 100%;
-      background-image: url("coming_soon_background.png");
+      background-image: url("/static/images/coming_soon_background.png");
       background-position: center;
       background-size: cover;
       position: relative;
