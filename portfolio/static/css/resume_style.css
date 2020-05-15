@@ -1,18 +1,39 @@
 body {
+  background-color: #5e938a;
+}
+
+#content {
   width: 80%;
   margin-left: 10%;
   background-color: #f1e9ef;
   border: 2px solid #2e1114;
-  padding: 5px 5px 5px 5px;
+  padding: 5px 10px 5px 10px;
+  font-family: "Helvetica";
+  height: 100%;
+}
+
+#container1 {
+  width: 60%;
+  float: left;
+  display: inline;
+}
+
+#container2 {
+  width: 30%;
+  float: left;
 }
 
 h1 {
-  color:#2e1114;
-
+  color:#744a68;
 }
 
 hr {
   color: #83677b;
+}
+
+div {
+  margin-top: 15px;
+  margin-bottom: 15px;
 }
 
 #contact_info {
@@ -31,7 +52,6 @@ hr {
   font-size: 18px;
   display: block;
   clear: left;
-  margin-bottom: 10px;
 }
 
 .column1 {
@@ -43,7 +63,6 @@ hr {
   float: left;
   width: 50%;
 }
-
 
 .job_details .job_duties {
   margin-left: 10%;
