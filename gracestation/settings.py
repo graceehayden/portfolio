@@ -24,7 +24,7 @@ SECRET_KEY = '4_=%623ms*!t4hq!&vz@5@2hajxp!2epy!97)#w9()o6w13p&!'
 
 DEBUG = True
 
-ALLOWED_HOSTS = ['127.0.0.1', '.heroku.com']
+ALLOWED_HOSTS = ['127.0.0.1', '.grace-portfolio.herokuapp.com']
 
 
 # Application definition
