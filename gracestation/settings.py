@@ -1,12 +1,27 @@
 import os
-from .local_settings import *
 
+try:
+    from .local_settings import *
+    SECRET_KEY = SECRET_KEY
+except:
+    pass
+
+try:
+    from boto.s3.connection import S3Connection
+    SECRET_KEY = S3Connection(os.environ['SECRET_KEY'])
+except:
+    pass
+
+SECRET_KEY = '4_=%623ms*!t4hq!&vz@5@2hajxp!2epy!97)#w9()o6w13p&!'
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
 DEBUG = True
 
-ALLOWED_HOSTS = ['127.0.0.1', '.grace-portfolio.herokuapp.com']
+ALLOWED_HOSTS = ['127.0.0.1',
+                 '.grace-portfolio.herokuapp.com',
+                 '.internationalgracestation.com'
+                 ]
 
 
 # Application definition
