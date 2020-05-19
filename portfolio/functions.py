@@ -21,12 +21,14 @@ def check_if_palindrome(word):
     else:
         word_is_even_number = False
 
-    if word_is_even_number and odd_letter_count > 0:
-        print ("Not a palindrome")
-    elif not word_is_even_number and odd_letter_count > 1:
-        print ("Not a palindrome")
+    if word == '':
+        answer = "Enter a word, ya loon!"
+    elif (word_is_even_number and odd_letter_count > 0) or (not word_is_even_number and odd_letter_count > 1):
+        answer = "No palindrome here"
     else:
-        print ("We have a palindrome! ")
+        answer = "We can make a palindrome!"
 
-word = input("Enter a word: ")
-check_if_palindrome(word)
+    return answer
+#word = input("Enter a word: ")
+#answer = check_if_palindrome(word)
+#print(answer)

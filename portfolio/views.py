@@ -2,6 +2,7 @@ from django.shortcuts import render, render_to_response
 from django.utils import timezone
 from .models import Post
 from django.template import RequestContext
+from .functions import *
 
 
 def coming_soon(request):
@@ -17,9 +18,19 @@ def resume(request):
     return render(request, 'resume.html', {})
 
 
+def palindromes(request):
+    answer = ''
+    if 'submit' in request.GET:
+        answer = check_if_palindrome(request.GET.get('word', ''))
+
+    return render(request, 'palindromes.html', {'answer': answer})
+
+
+def function_junction(request):
+    return render(request, 'function_junction.html', {})
+
 def error(request):
     return render(request, 'error.html', {})
-
 
 
 #def handler404(request, *args, **argv):

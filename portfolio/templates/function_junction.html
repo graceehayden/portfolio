@@ -1,0 +1,26 @@
+{% load static %}
+
+<!doctype html>
+
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <link rel="stylesheet" href="{% static 'css/functions.css' %}">
+  <title>Function Junction</title>
+
+</head>
+
+<body>
+
+  <center>
+    <div id="function_index">
+      <h2>Function Junction!</h2>
+      <hr />
+      <h3>Here is where I'm storing all my problem-solving fun</h3>
+      <ul>
+        <li><a href="{% url 'palindromes' %}">Palindromes</a></li>
+      </ul>
+    </div>
+  </center>
+</body>
+</html>
