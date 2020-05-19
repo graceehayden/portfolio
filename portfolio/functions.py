@@ -32,3 +32,12 @@ def check_if_palindrome(word):
 #word = input("Enter a word: ")
 #answer = check_if_palindrome(word)
 #print(answer)
+
+
+def merge_sort_lists(list1, list2):
+    merged_list = list1 + list2
+    return sorted(merged_list)
+
+#list1 = ["animal", "trees", "television", "nature"]
+#list2 = ["office", "cars", "vacation"]
+#print(sort_and_merge_lists(list1, list2))

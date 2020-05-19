@@ -17,9 +17,19 @@
       <h2>Function Junction!</h2>
       <hr />
       <h3>Here is where I'm storing all my problem-solving fun</h3>
-      <ul>
-        <li><a href="{% url 'palindromes' %}">Palindromes</a></li>
-      </ul>
+
+      <div class="container">
+        {% include 'palindromes.html' %}
+      </div>
+
+      <div class="container">
+        {% include 'post_list.html' %}
+      </div>
+
+      <div class="container">
+        {% include 'merge_and_sort_lists.html' %}
+      </div>
+
     </div>
   </center>
 </body>

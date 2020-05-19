@@ -7,20 +7,12 @@ h2 {
   color: #27534e;
 }
 
-div {
+.container {
   width: 40%;
-  margin-top: 15%;
-  padding-bottom: 5%;
   border: solid 1px;
-  background-color: white;
-}
-
-#function_index{
-  width: 80%;
-  height: 80%;
-  margin-top: 20px;
-  border: solid 1px;
-  background-color: white;
+  background-color: #cce7db;
+  padding: 15px;
+  margin: 15px;
 }
 
 .success {
@@ -31,4 +23,12 @@ div {
 }
 .blank {
   font-weight: bold; color: red;
+}
+
+#function_index{
+  width: 80%;
+  height: 100%;
+  margin-top: 20px;
+  border: solid 1px;
+  background-color: white;
 }

@@ -3,6 +3,7 @@ from django.utils import timezone
 from .models import Post
 from django.template import RequestContext
 from .functions import *
+import random
 
 
 def coming_soon(request):
@@ -18,16 +19,33 @@ def resume(request):
     return render(request, 'resume.html', {})
 
 
+def function_junction(request):
+    return render(request, 'function_junction.html', {})
+
+
 def palindromes(request):
     answer = ''
     if 'submit' in request.GET:
         answer = check_if_palindrome(request.GET.get('word', ''))
 
-    return render(request, 'palindromes.html', {'answer': answer})
+    return render(request, 'function_junction.html', {'answer': answer})
 
 
-def function_junction(request):
-    return render(request, 'function_junction.html', {})
+def post_list(request):
+    posts = Post.objects.order_by('published_date')[:3]
+    return render(request, 'function_junction.html', {'posts': posts})
+
+
+def merge_and_sort_lists(request):
+    if 'submit' in request.GET:
+        list1 = [random.randrange(1, 50, 1) for i in range(7)]
+        list2 = [random.randrange(1, 50, 1) for i in range(7)]
+    list = merge_sort_lists(list1, list2)
+    return render(request, 'function_junction.html', {'list': list,
+                                                         'list1': list1,
+                                                         'list2': list2})
+
+
 
 def error(request):
     return render(request, 'error.html', {})
@@ -45,7 +63,3 @@ def error(request):
 #                                  context_instance=RequestContext(request))
 #    response.status_code = 500
 #    return response
-
-def post_list(request):
-    posts = Post.objects.filter(published_date__lte=timezone.now()).order_by('published_date')
-    return render(request, 'blog/post_list.html', {'posts': posts})

@@ -1,36 +1,16 @@
-{% load static %}
+<h3>Can it make a Palindrome?</h3>
 
-<!doctype html>
+<form action="{% url 'palindromes' %}" method="GET">
+  <label for="word">Enter a word to see if it can make a palindrome:</label>
+  <br />
+  <input name="word" id="word" value="" type="text" />
+  <button type="submit" name="submit" value="submit">Try</button>
+</form>
 
-<html lang="en">
-<head>
-  <meta charset="utf-8">
-  <title>Function Junction</title>
-  <link rel="stylesheet" href="{% static 'css/functions.css' %}">
-
-</head>
-
-<body>
-
-  <center>
-    <div>
-      <h2>Can it make a Palindrome?</h2>
-      <br />
-      <br />
-      <form action="{% url 'palindromes' %}" method="GET">
-        <label for="word">Enter a word to see if it can make a palindrome:</label>
-        <br />
-        <input name="word" id="word" value="" type="text" />
-        <button type="submit" name="submit" value="submit">Try</button>
-      </form>
-        {% if answer == 'We can make a palindrome!' %}
-          <p class="success">{{ answer }}</p>
-        {% elif answer == 'No palindrome here' %}
-          <p class="negative">{{ answer }}</p>
-        {% elif answer == 'Enter a word, ya loon!' %}
-          <p class="blank">{{ answer }}</p>
-        {% endif %}
-    </div>
-  </center>
-</body>
-</html>
+{% if answer == 'We can make a palindrome!' %}
+  <p class="success">{{ answer }}</p>
+{% elif answer == 'No palindrome here' %}
+  <p class="negative">{{ answer }}</p>
+{% elif answer == 'Enter a word, ya loon!' %}
+  <p class="blank">{{ answer }}</p>
+{% endif %}
