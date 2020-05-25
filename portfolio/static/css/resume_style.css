@@ -5,7 +5,7 @@ body {
 #content {
   width: 80%;
   margin-left: 10%;
-  background-color: ##F0F0F0;
+  background-color: #F0F0F0;
   border: 2px solid #2e1114;
   padding: 5px 10px 5px 10px;
   font-family: "Helvetica";
@@ -48,7 +48,7 @@ div {
 
 .section_heading {
   font-weight: bold;
-  color:#652a52;
+  color:#44004e;
   font-size: 18px;
   display: block;
   clear: left;
