@@ -1,11 +1,11 @@
 body {
-  background-color: black;
+  background-color: #003a3d;
 }
 
 #content {
   width: 80%;
   margin-left: 10%;
-  background-color: #f1e9ef;
+  background-color: ##F0F0F0;
   border: 2px solid #2e1114;
   padding: 5px 10px 5px 10px;
   font-family: "Helvetica";
@@ -24,11 +24,11 @@ body {
 }
 
 h1 {
-  color:#744a68;
+  color:#44004e;
 }
 
 hr {
-  color: #83677b;
+  color: #44004e;
 }
 
 div {

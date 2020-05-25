@@ -41,3 +41,21 @@ def merge_sort_lists(list1, list2):
 #list1 = ["animal", "trees", "television", "nature"]
 #list2 = ["office", "cars", "vacation"]
 #print(sort_and_merge_lists(list1, list2))
+
+
+#def fibonacci_num(n):
+#    n = int(n)
+#    if n == 0 or n==1:
+#        series = [0]
+#    if n == 2:
+#        series =  [0, 1]
+#    else:
+#        series = [0, 1]
+#        for num in series:
+#            series.append(series[num])
+#        #if series.index([num]) <= n:
+#        #        series.append(series[-1]+series[-2])
+#    return series[-1]
+
+#n = input("Enter a number: ")
+#print(fibonacci_num(n))
