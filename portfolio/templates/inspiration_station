@@ -1,0 +1,19 @@
+{% load static %}
+
+<!doctype html>
+
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <link rel="stylesheet" href="{% static 'css/functions.css' %}">
+  <title>Function Junction</title>
+
+</head>
+
+<body>
+
+ <img src="https://i.imgur.com/6rQIi2y.gifv" />
+
+
+ </body>
+ </html>
