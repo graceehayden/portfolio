@@ -4,8 +4,8 @@ from .models import Post
 from django.template import RequestContext
 from .functions import *
 import random
-from .models import Video
-from .forms import VideoForm
+from .models import *
+from .forms import *
 
 def coming_soon(request):
     return render(request, 'coming_soon.html', {})
@@ -47,7 +47,6 @@ def merge_and_sort_lists(request):
 
 
 def videos(request):
-
     lastvideo= Video.objects.last()
     videofile= lastvideo.videofile
 
