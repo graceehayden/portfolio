@@ -46,10 +46,9 @@ def merge_and_sort_lists(request):
                                                       'list2': list2})
 
 
-def showvideo(request):
+def videos(request):
 
     lastvideo= Video.objects.last()
-
     videofile= lastvideo.videofile
 
     form= VideoForm(request.POST or None, request.FILES or None)

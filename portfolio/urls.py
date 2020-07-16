@@ -9,6 +9,7 @@ urlpatterns = [
     path('', views.coming_soon, name='coming_soon'),
     path('resume', views.resume, name='resume'),
     path('portfolio', views.portfolio, name='portfolio'),
+    path('videos', views.videos, name='videos'),
     path('function_junction/', views.function_junction, name='function_junction'),
     path('function_junction/palindromes', views.palindromes, name='palindromes'),
     path('function_junction/post_list', views.post_list, name='post_list'),
