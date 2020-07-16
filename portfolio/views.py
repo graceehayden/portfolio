@@ -4,19 +4,19 @@ from .models import Post
 from django.template import RequestContext
 from .functions import *
 import random
-
+from .models import Video
+from .forms import VideoForm
 
 def coming_soon(request):
     return render(request, 'coming_soon.html', {})
 
 
-def hello_pallet(request):
-    posts = Post.objects.order_by('published_date')
-    return render(request, 'hello_pallet.html', {'posts': posts})
-
-
 def resume(request):
     return render(request, 'resume.html', {})
+
+
+def portfolio(request):
+    return render(request, 'portfolio.html', {})
 
 
 def function_junction(request):
@@ -42,9 +42,30 @@ def merge_and_sort_lists(request):
         list2 = [random.randrange(1, 50, 1) for i in range(7)]
     list = merge_sort_lists(list1, list2)
     return render(request, 'function_junction.html', {'list': list,
-                                                         'list1': list1,
-                                                         'list2': list2})
+                                                      'list1': list1,
+                                                      'list2': list2})
 
+
+def showvideo(request):
+
+    lastvideo= Video.objects.last()
+
+    videofile= lastvideo.videofile
+
+    form= VideoForm(request.POST or None, request.FILES or None)
+    if form.is_valid():
+        form.save()
+
+    context= {'videofile': videofile,
+              'form': form
+              }
+
+    return render(request, 'videos.html', context)
+
+
+def hello_pallet(request):
+    posts = Post.objects.order_by('published_date')
+    return render(request, 'hello_pallet.html', {'posts': posts})
 
 
 def error(request):

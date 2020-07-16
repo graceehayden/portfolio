@@ -1,0 +1,33 @@
+{% load static %}
+
+<!DOCTYPE html>
+
+<head>
+    <title>International Grace Station</title>
+
+    <script type="text/javascript" src="{% static 'js/coming_soon.js' %}"></script>
+
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css">
+    <link rel="stylesheet" href="{% static 'css/coming_soon.css' %}">
+</head>
+
+<body>
+  <div class="bgimg">
+
+    <div id="resume_link">
+      <a href="{% url 'resume' %}">View My Resume</a>
+      <br />
+    </div>
+
+    <div class="middle">
+      <h1>COMING SOON</h1>
+      <hr>
+      <p id="countdown"></p>
+    </div>
+
+  </div>
+
+</body>
+
+</html>
