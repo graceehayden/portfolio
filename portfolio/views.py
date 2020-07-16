@@ -7,6 +7,7 @@ import random
 from .models import *
 from .forms import *
 
+
 def coming_soon(request):
     return render(request, 'coming_soon.html', {})
 
@@ -47,14 +48,14 @@ def merge_and_sort_lists(request):
 
 
 def videos(request):
-    lastvideo= Video.objects.last()
-    videofile= lastvideo.videofile
+    #lastvideo= Video.objects.last()
+    #videofile= lastvideo.videofile
 
     form= VideoForm(request.POST or None, request.FILES or None)
     if form.is_valid():
         form.save()
 
-    context= {'videofile': videofile,
+    context= {
               'form': form
               }
 
