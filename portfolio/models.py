@@ -9,7 +9,7 @@ class Video(models.Model):
 
     def __str__(self):
         return self.name + ": " + str(self.videofile)
-        
+
 
 class Post(models.Model):
     author = models.ForeignKey(settings.AUTH_USER_MODEL, on_delete=models.CASCADE)

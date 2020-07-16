@@ -22,6 +22,8 @@
   <br><br>
 
   {% for video in videos %}
+    {{ video }}
+    
     <video width='400' controls>
       <!--<source src='{{ media_url }}{{ video.verbose_name }}' type='video/mp4'>-->
     <source src='{{ MEDIA_URL }}{{ video }}' type='video/mp4'>
