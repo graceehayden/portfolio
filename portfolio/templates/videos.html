@@ -13,10 +13,10 @@
 <body>
 
   <h1>Upload A Video</h1>
-  <form enctype="multipart/form-data" method="POST" action="{% url videos %}">
-  {% csrf_token %}
-  {{ form.as_p }}
-  <input type="submit" value="Upload"/>
+  <form enctype="multipart/form-data" method="POST" action="{% url 'videos' %}">
+    {% csrf_token %}
+    {{ form.as_p }}
+    <input type="submit" value="Upload"/>
   </form>
 
   <br><br>
