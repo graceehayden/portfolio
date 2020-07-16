@@ -20,11 +20,13 @@
   </form>
 
   <br><br>
+
+  {% for video in videos %}
   <video width='400' controls>
-    <!--<source src='{{ media_url }}{{ videofile.verbose_name }}' type='video/mp4'>
-  <source src='{{ MEDIA_URL }}{{ videofile }}' type='video/mp4'>-->
-  Your browser does not support the video tag.
+    <source src='{{ media_url }}{{ video.verbose_name }}' type='video/mp4'>
+  <!--<source src='{{ MEDIA_URL }}{{ videofile }}' type='video/mp4'>-->
   </video>
+  {% endfor %}
   <br><br>
   </p>
 

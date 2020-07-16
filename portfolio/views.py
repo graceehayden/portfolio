@@ -48,14 +48,15 @@ def merge_and_sort_lists(request):
 
 
 def videos(request):
-    #lastvideo= Video.objects.last()
-    #videofile= lastvideo.videofile
+    videos = []
+    videos = Video.objects.all()
 
     form= VideoForm(request.POST or None, request.FILES or None)
     if form.is_valid():
         form.save()
 
     context= {
+              'videos': videos,
               'form': form
               }
 
