@@ -68,3 +68,14 @@ div {
   margin-left: 10%;
   font-size: 14px;
 }
+
+.examples_popup {
+    visibility: hidden;
+    position:absolute;
+    border:1px solid #000;
+    padding: 15px 15px 15px 15px;
+    width:250px;
+    height:auto;
+    background-color:  #003a3d;
+    color: white;
+}

@@ -1,2 +1,6 @@
-object.onmouseover = function(){js_popup};
-object.addEventListener("mouseover", js_popup);
+function show(id) {
+  document.getElementById(id).style.visibility = "visible";
+}
+function hide(id) {
+  document.getElementById(id).style.visibility = "hidden";
+}

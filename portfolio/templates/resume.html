@@ -2,16 +2,9 @@
 
 <!DOCTYPE html>
     <head>
+        <script type="text/javascript" src="{% static 'js/gracestation.js' %}"></script>
         <link rel="stylesheet" href="{% static 'css/resume_style.css' %}">
-        <style>
-            .description {
-                display:none;
-                position:absolute;
-                border:1px solid #000;
-                width:400px;
-                height:400px;
-            }
-        </style>
+
         <title>Grace Hayden</title>
     </head>
     <body>
@@ -35,12 +28,20 @@
                 <ul>
                     <li>Python with expertise in Django </li>
                     <li>Effective UI via Accessible HTML/CSS </li>
-                    <li>Git </li>
+                    <li onMouseOver="show('git_url')" onMouseOut="hide('git_url')">
+                      <a  target="_blank" style="text-decoration: none; color: black;" href="https://github.com/graceehayden/">Git</a>
+                      <div class="examples_popup" id="git_url">
+                          Click "Git" to view my Github
+                      </div>
+                    </li>
                     <li>SQL</li>
                     <li>RESTful APIs</li>
-                    <li class="tiptext">JavaScript
-                      <div class="description">
-                          <b>Examples:</b><br />
+                    <li onMouseOver="show('js_examples')" onMouseOut="hide('js_examples')">
+                      JavaScript
+                      <div class="examples_popup" id="js_examples">
+                          <b><u>Examples:</u></b>
+                          <br />
+                          <br />
                           MVC structure: SaaS functionality augmentation<br />
                           API calls<br />
                           Informational popups<br />
@@ -70,8 +71,9 @@
                 Web Developer (01/2019 - present) <br />
             </div>
             <ul class="job_duties">
+                <li>Develop on cloud-based SaaS with JavaScript MVC architecture and RESTful APIs</li>
                 <li>Assist in development required for customized managed deployment</li>
-                <li>Develop within cloud-based SaaS</li>
+                <li>Developed training website for project managers who use platform </li>
                 <li>Work with project managers to determine technical resolutions for system maintenance </li>
             </ul>
 
