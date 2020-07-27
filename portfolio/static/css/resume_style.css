@@ -1,34 +1,13 @@
 body {
-  background-color: #003a3d;
-}
-
-#content {
-  width: 80%;
-  margin-left: 10%;
-  background-color: #F0F0F0;
-  border: 2px solid #2e1114;
-  padding: 5px 10px 5px 10px;
-  font-family: "Helvetica";
-  height: 100%;
-}
-
-#container1 {
-  width: 60%;
-  float: left;
-  display: inline;
-}
-
-#container2 {
-  width: 30%;
-  float: left;
+  background-color: #58404c;
 }
 
 h1 {
-  color:#44004e;
+  color:#874e4c;
 }
 
 hr {
-  color: #44004e;
+  color: #e2b091;
 }
 
 div {
@@ -36,19 +15,9 @@ div {
   margin-bottom: 15px;
 }
 
-#contact_info {
-  font-weight: bold;
-  font-size: 16px;
-}
-
-#resume_title {
-  text-align: center;
-  font-weight: bold;
-}
-
 .section_heading {
   font-weight: bold;
-  color:#44004e;
+  color:#874e4c;
   font-size: 18px;
   display: block;
   clear: left;
@@ -76,6 +45,36 @@ div {
     padding: 15px 15px 15px 15px;
     width:250px;
     height:auto;
-    background-color:  #003a3d;
-    color: white;
+    background-color:  #f6ded4;
+}
+
+#content {
+  width: 80%;
+  margin-left: 10%;
+  background-color: #F0F0F0;
+  border: 2px solid #2e1114;
+  padding: 5px 10px 5px 10px;
+  font-family: "Helvetica";
+  height: 100%;
+}
+
+#container1 {
+  width: 60%;
+  float: left;
+  display: inline;
+}
+
+#container2 {
+  width: 30%;
+  float: left;
+}
+
+#contact_info {
+  font-weight: bold;
+  font-size: 16px;
+}
+
+#resume_title {
+  text-align: center;
+  font-weight: bold;
 }
