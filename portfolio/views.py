@@ -1,11 +1,15 @@
 from django.shortcuts import render, render_to_response
 from django.utils import timezone
-from .models import Post
 from django.template import RequestContext
+from .models import Post
 from .functions import *
-import random
 from .models import *
 from .forms import *
+import random
+
+
+def index(request):
+    return render(request, 'index.html', {})
 
 
 def coming_soon(request):
@@ -59,7 +63,7 @@ def videos(request):
 
     videos = []
     videos = Video.objects.all()
-
+    print(videos)
     context= {
               'videos': videos,
               'form': form
@@ -68,13 +72,13 @@ def videos(request):
     return render(request, 'videos.html', context)
 
 
-def hello_pallet(request):
-    posts = Post.objects.order_by('published_date')
-    return render(request, 'hello_pallet.html', {'posts': posts})
-
 
 def error(request):
     return render(request, 'error.html', {})
+
+#def hello_pallet(request):
+#    posts = Post.objects.order_by('published_date')
+#    return render(request, 'hello_pallet.html', {'posts': posts})
 
 
 #def handler404(request, *args, **argv):

@@ -11,9 +11,8 @@ try:
     SECRET_KEY = S3Connection(os.environ['SECRET_KEY'])
 except:
     pass
-
 SECRET_KEY = '4_=%623ms*!t4hq!&vz@5@2hajxp!2epy!97)#w9()o6w13p&!'
-# Build paths inside the project like this: os.path.join(BASE_DIR, ...)
+
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
 DEBUG = True
@@ -23,8 +22,6 @@ ALLOWED_HOSTS = ['127.0.0.1',
                  '.internationalgracestation.com'
                  ]
 
-
-# Application definition
 
 INSTALLED_APPS = [
     'django.contrib.admin',

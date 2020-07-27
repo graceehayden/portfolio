@@ -22,11 +22,11 @@
   <br><br>
 
   {% for video in videos %}
-    {{ video }}
-    
+    {{ video.verbose_name }}
+
     <video width='400' controls>
-      <!--<source src='{{ media_url }}{{ video.verbose_name }}' type='video/mp4'>-->
-    <source src='{{ MEDIA_URL }}{{ video }}' type='video/mp4'>
+      <source src='{{ media_url }}{{ video.verbose_name }}' type='video/mp4'>
+    <!--<source src='{{ MEDIA_URL }}{{ video }}' type='video/mp4'>-->
     </video>
   {% endfor %}
   <br><br>
