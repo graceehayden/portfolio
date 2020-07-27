@@ -24,6 +24,14 @@ def portfolio(request):
     return render(request, 'portfolio.html', {})
 
 
+def travel_blog(request):
+    return render(request, 'travel_inspiration.html', {})
+
+
+def inspiration_station(request):
+    return render(request, 'inspiration_station.html', {})
+
+
 def function_junction(request):
     return render(request, 'function_junction.html', {})
 
