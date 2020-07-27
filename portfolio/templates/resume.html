@@ -3,7 +3,15 @@
 <!DOCTYPE html>
     <head>
         <link rel="stylesheet" href="{% static 'css/resume_style.css' %}">
-
+        <style>
+            .description {
+                display:none;
+                position:absolute;
+                border:1px solid #000;
+                width:400px;
+                height:400px;
+            }
+        </style>
         <title>Grace Hayden</title>
     </head>
     <body>
@@ -28,22 +36,34 @@
                     <li>Python with expertise in Django </li>
                     <li>Effective UI via Accessible HTML/CSS </li>
                     <li>Git </li>
-                    <li>SQL and Oracle </li>
-                    <li onmouseover="js_popup">JavaScript</li>
+                    <li>SQL</li>
+                    <li>RESTful APIs</li>
+                    <li class="tiptext">JavaScript
+                      <div class="description">
+                          <b>Examples:</b><br />
+                          MVC structure: SaaS functionality augmentation<br />
+                          API calls<br />
+                          Informational popups<br />
+                          Toggle display<br />
+                          Replace text translations<br />
+                          UI styling<br />
+                      </div>
+                    </li>
                 </ul>
             </div>
             <div class="column2">
                 <ul>
-                    <li>JavaScript MVC Architecture </li>
-                    <li>Effective Client/Customer communication </li>
+                    <li>MVC Architecture </li>
+                    <li>Documentation and ERDs</li>
                     <li>Stewardship </li>
                     <li>Server Maintenance </li>
-                    <li>Teamwork and collaboration</li>
+                    <li>Kanban, Jira</li>
+                    <li>Regex, Parsing XML Payloads</li>
                 </ul>
             </div>
 
             <hr />
-            
+
             <div class="section_heading">Experience:</div>
             <div class="job_details">
                 <b>Dell Technologies</b><br />
