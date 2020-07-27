@@ -1,7 +1,8 @@
 import os
 
+SECRET_KEY = os.getenv('SECRET_KEY', 'Optional default value')
+
 try:
-    from .local_settings import *
     SECRET_KEY = SECRET_KEY
 except:
     pass
@@ -11,7 +12,6 @@ try:
     SECRET_KEY = S3Connection(os.environ['SECRET_KEY'])
 except:
     pass
-SECRET_KEY = '4_=%623ms*!t4hq!&vz@5@2hajxp!2epy!97)#w9()o6w13p&!'
 
 
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
