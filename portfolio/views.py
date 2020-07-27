@@ -24,7 +24,7 @@ def portfolio(request):
     return render(request, 'portfolio.html', {})
 
 
-def travel_blog(request):
+def travel_inspiration(request):
     return render(request, 'travel_inspiration.html', {})
 
 
