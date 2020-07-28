@@ -2,7 +2,7 @@
 
 <!DOCTYPE html>
 
-<html lang="en">
+<html>
 <head>
   <meta charset="utf-8">
   <script type="text/javascript" src="{% static 'js/gracestation.js' %}"></script>
@@ -19,57 +19,96 @@
       <h1>Grace Hayden's Portfolio</h1>
     </div>
 
-
-    <div id="intro">
-      I am a full-stack Python/Django, JavaScript, Natural, and SQL developer.
-      All of the work I have done has been within secure environments
-      and is not directly accessible for viewing.  Below is a
-      descriptive compilation of the project work I have participated in
-      or completed in my career.
-    </div>
-
-    <hr>
+    <center>
+        <div id="intro">
+          <b>* Full-stack Python/Django, JavaScript, Natural, and SQL developer * </b>
+          <br />
+          <br />
+          My favorite part of my career is the ever-changing landscape
+          and opportunity to learn. I am always seeking new and improved
+          ways to use my skills and effect positive change.
+          <br />
+          <br />
+          All of the project work included has been confidential
+          and within secure environments. Below is a descriptive compilation
+          of each.
+        </div>
+    </center>
 
     <div class="chapter">
 
         <h2>The University of Texas at Austin Office of the Registrar</h2>
 
-        <button class="collapsible">
+        <p><b>Toolbox: </b><br />
+          Mainframe, Task Manager for change log batch process automation, JCL,
+          Pype, UTDirect framework for consistent user experience, Apollo
+        </p>
+
+        <button onclick="toggleDisplay('crin')" type="button" class="project_title collapsible">
           Modernized Online Course Inventory
         </button>
-        <div class="content" id="crin">
-          <p>This university of Texas operates with a homegrown system
-            and a highly customized stack of in-house tools and frameworks.</p>
+
+        <div class="project_details" id="crin">
+          <p><b>Background: </b>The university of Texas operates with a homegrown system
+            and a highly customized stack of in-house tools and frameworks.
+            </p>
+
+          <p><b>The project:</b> Adding a modernized, Python/Django front end to
+            the legacy mainframe course inventory system. </p>
 
           <p><b>The legacy system:</b>
             The back end is a mainframe coded with Natural/ADABAS, a
             procedural language similar to COBOL.
             Up until 2016, the only way for registrar employees to view the
             course inventory was using a maiframe interface.
-             Coding the programs that ran each of the
+            Coding the programs that ran each of the
             mainframe interfaces was a skill of its own.
             The legacy system is pictured.</p>
 
              ***** pic of mainframe crin  *****
 
-          <p><b>The new system:</b> would be a modern interface designed with
-            Python and Django.
-            It would also greatly expand the functionality available to users,
+          <p><b>The new system:</b> A familiar interface designed with
+            Python and Django, greatly expanding the functionality available to users,
             including a variety of search parameters for the course listing,
             a comparison function to view and compare
-            semester data for a single course, and a change log. </p>
-
-          <p>Toolbox: <br />
-            Mainframe,
-            Task Manager for batch process automation
-            JCL,
-            Pype,
-            UTDirect framework for consistent user experience,
-            Apollo
+            semester data for a single course, and a change log.
+            The back end remained on the mainframe as the registrar's data
+            needed to remain accessible to all other departments while systems were
+            being moved off of the mainframe campus-wide. The change log required
+            a new ADABAS file, which underwent a design and approval process
+            before its creation.
           </p>
+
           <div class="tooltip">
-            <img src="static/images/Course_Inventory_Home_Page.PNG" />
-              <span class="tooltiptext">
+              <img src="static/images/Course_Inventory_Home_Page.PNG" />
+                <div class="tooltiptext">
+                  The new course inventory home page. Improvements:
+                  <ul>
+                      <li>More search parameters</li>
+                      <li>Modernized, user friendly</li>
+                      <li>Filters available</li>
+                      <li>Form input is scrubbed to display informative
+                      errors to user.</li>
+                  </ul>
+                </div>
+          </div>
+
+          <div class="tooltip">
+              <img src="static/images/CRIN_Semester_Comparison.PNG" />
+              <div class="tooltiptext"> Course Semester Comparison.
+                <ul>
+                    <li>Compare details of a course from one semester to another.</li>
+                    <li>Differences would be highlighted.</li>
+                    <li>Easy navigation between semesters displayed.</li>
+                    <li>A summary of changed fields to look for is
+                      provided at the top.</li>
+                </ul>
+              </div>
+          </div>
+
+          <div class="tooltip">
+              <img src="static/images/CRIN_Change_Log.PNG" />
+              <div class="tooltiptext">
                 The new course inventory home page. Improvements: <br />
                 <ul>
                     <li>More search parameters</li>
@@ -77,34 +116,32 @@
                     <li>Filters available</li>
                     <li>Form input scrubbed </li>
                 </ul>
-              </span>
+              </div>
           </div>
-          <img src="static/images/CRIN_Semester_Comparison.PNG" />
-          <img src="static/images/CRIN_Change_Log.PNG" />
         </div>
 
-        <button class="collapsible">
+        <button onclick="toggleDisplay('log_file')" class="project_title collapsible">
           Mainframe Log File
         </button>
-        <div class="content">
-          <p></p>
+        <div class="project_details" id="log_file">
 
-          <p>Toolbox: <br />
-            Mainframe,
-            Task Manager for batch process automation
-            JCL,
-            Pype,
-            UTDirect framework for consistent user experience,
-            Apollo
+          <p><b>Background: </b>
           </p>
-            <img src="{% static 'images/#.png' %}" />
+
+          <p><b>The project:</b>.</p>
+          <img src="{% static 'images/#.png' %}" />
 
         </div>
 
-        <button class="collapsible">
+        <button onclick="toggleDisplay('grades')" class="project_title collapsible">
           Grades maintenance - legacy programs older than I am
         </button>
-        <div class="content">
+        <div class="project_details" id="grades">
+          <p><b>Background: </b>
+          </p>
+
+          <p><b>The project:</b>.</p>
+
         </div>
 
     </div>
@@ -116,23 +153,21 @@
         <h2>The University of Texas at Austin International Office</h2>
 
         <div class="toolbox">
-          Toolbox:
-          Mainframe
-          Task Manager // JCL for batch process automation
-          Pype
-          UTDirect
-          Apollo
-          Login and streamlined, consistent user Experience
-          Oracle
-          SQL Server
+          <b>Toolbox:</b>
+          Mainframe, Task Manager for batch process automation, JCL,
+          Pype, UTDirect framework for consistent user Experience,
+          Apollo authorization, Oracle, SQL Server
         </div>
 
-        <button class="collapsible">
-          ERD for study Abroad rewrite
-          server maintenance
+        <button onclick="toggleDisplay('study_abroad')" class="project_title collapsible">
+          Redesign of Study Abroad Suite
         </button>
-        <div class="content">
-          Test
+        <div class="project_details" id="study_abroad">
+          <p><b>Background: </b>
+          </p>
+
+          <p><b>The project:</b>.</p>
+
         </div>
 
     </div>
@@ -144,27 +179,40 @@
         <h2>Dell Technologies</h2>
 
         <div class="toolbox">
-            Toolbox
+          <b>Toolbox:</b>
+          QuickBase SaaS, VBA, Notepad, in-house web server version control
         </div>
 
-        <button class="collapsible">
-          MVC JavaScript SaaS augmentation
+        <button onclick="toggleDisplay('quickbase')" class="project_title collapsible">
+          Augmentation of SaaS Functionality for Custom Applications
         </button>
-        <div  class="content">
-          Test
+        <div  class="project_details" id="quickbase">
+          <p><b>Background: </b>
+          </p>
+
+          <p><b>The project:</b>.</p>
+
         </div>
 
-        <button class="collapsible">
+        <button onclick="toggleDisplay('documentation')" class="project_title collapsible">
           Legacy Systems Documentation
-          Example: Communications Flowchart
         </button>
-        <div  class="content">
+        <div  class="project_details" id="documentation">
+          <p><b>Background: </b>
+          </p>
+
+          <p><b>The project:</b>.</p>
+
         </div>
 
-        <button class="collapsible">
-          Training Suite: Custom Emails Videos
+        <button onclick="toggleDisplay('training_suite')" class="project_title collapsible">
+          Training Suite
         </button>
-        <div  class="content">
+        <div  class="project_details" id="training_suite">
+          <p><b>Background: </b></p>
+
+          <p><b>The project:</b>.</p>
+
         </div>
 
     </div>

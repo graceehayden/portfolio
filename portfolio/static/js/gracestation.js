@@ -6,19 +6,11 @@ function hide(id) {
   document.getElementById(id).style.visibility = "hidden";
 }
 
-
-// collapsible display of project details
-var coll = document.getElementsByClassName("collapsible");
-var i;
-
-for (i = 0; i < coll.length; i++) {
-coll[i].addEventListener("click", function() {
-  this.classList.toggle("active");
-  var content = this.nextElementSibling;
-  if (content.style.maxHeight){
-    content.style.maxHeight = null;
+function toggleDisplay(id) {
+  var x = document.getElementById(id);
+  if (x.style.display != "block") {
+    x.style.display = "block";
   } else {
-    content.style.maxHeight = content.scrollHeight + "px";
+    x.style.display = "none";
   }
-});
 }
