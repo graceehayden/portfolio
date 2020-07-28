@@ -21,7 +21,7 @@ def resume(request):
 
 
 def portfolio(request):
-    return render(request, 'coming_soon.html', {})
+    return render(request, 'portfolio.html', {})
 
 
 def travel_inspiration(request):
