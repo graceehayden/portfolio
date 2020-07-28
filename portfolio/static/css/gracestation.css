@@ -1,20 +1,48 @@
-body, html {
- height: 100%
-}
-
-hr {
-    margin: auto;
-    width: 40%;
-}
-
-.bgimg {
+body {
+    font: helvetica;
     height: 100%;
     background-image: url("/static/images/coming_soon_background.png");
     background-position: center;
     background-size: cover;
-    position: relative;
-    font-family: "Courier New", Courier, monospace;
+    background-attachment: fixed;
+    position: absolute;
     font-size: 25px;
+    overflow: scroll;
+}
+
+hr {
+    margin-top: 20px;
+    width: 40%;
+}
+
+h1{
+    text-align: center;
+    font-size: 30px;
+    color: #008b8b;
+}
+
+h2{
+    font-size: 20px;
+    color: #008b8b;
+}
+
+button{
+    margin-top: 15px;
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+div {
+    margin-top: 15px;
+}
+
+img {
+    width: 60%;
+    height: auto;
+    margin-top: 15px;
+    margin-left: 100px;
+    display: block;
+    text-align: center;
 }
 
 .middle {
@@ -25,13 +53,64 @@ hr {
     text-align: center;
 }
 
-hr {
-    margin: auto;
-    width: 40%;
+.center {
+    text-align: center;
 }
 
-.center {
-  text-align: center;
+.chapter{
+    margin: 10px 10px 10px 10px;
+    background-color: #ffffe8;
+    border: 1px black;
+}
+
+.toolbox{
+    width: 60%;
+    border: 1px black;
+    font-size: 16px;
+}
+
+.collapsible {
+    background-color: #777; /* #eee */
+    color: #444;
+    cursor: pointer;
+    padding: 18px;
+    width: 100%;
+    border: none;
+    text-align: left;
+    outline: none;
+    font-size: 15px;
+}
+
+.active, .collapsible:hover {
+    background-color: #ccc; /* #555 */
+}
+
+.content {
+    padding: 0 18px;
+  /*  display: none;
+  max-height: 0;*/
+    overflow: hidden;
+    background-color: #f1f1f1;
+    transition: max-height 0.2s ease-out;
+}
+
+.collapsible:after {
+  content: '\02795'; /* Unicode character for "plus" sign (+) */
+  font-size: 13px;
+  color: white;
+  float: right;
+  margin-left: 5px;
+}
+
+.active:after {
+  content: "\2796"; /* Unicode character for "minus" sign (-) */
+}
+
+
+#intro {
+    margin-left: 20px;
+    font-size: 16px;
+    font: helvetica;
 }
 
 #resume_link {
@@ -42,6 +121,7 @@ hr {
 
 #content {
   width: 80%;
+  font-size: 16px;
   margin-left: 10%;
   margin-right: 10%;
   border: 1px;
@@ -58,4 +138,26 @@ hr {
   width: 40%;
   text-align: center;
   border: 1px;
+}
+
+
+.tooltip {
+  position: relative;
+  display: inline-block;
+  border-bottom: 1px dotted black;
+}
+
+.tooltip .tooltiptext {
+  visibility: hidden;
+  width: 300px;
+  background-color: #ffffe8;
+  text-align: center;
+  padding: 5px 0;
+  border-radius: 6px;
+  position: absolute;
+  z-index: 1;
+}
+
+.tooltip:hover .tooltiptext {
+  visibility: visible;
 }

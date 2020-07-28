@@ -5,106 +5,169 @@
 <html lang="en">
 <head>
   <meta charset="utf-8">
+  <script type="text/javascript" src="{% static 'js/gracestation.js' %}"></script>
   <link rel="stylesheet" href="{% static 'css/gracestation.css' %}">
   <title>Grace Hayden's Portfolio</title>
 
 </head>
 
-<body class="bgimg">
+<body>
 
 <div id="content">
 
-  <div  id="banner">
-    <h1>Grace Hayden's Portfolio</h1>
-  </div>
+    <div  id="banner">
+      <h1>Grace Hayden's Portfolio</h1>
+    </div>
 
-  <div id="intro">
-    I am a full-stack Python/Django, JavaScript, Natural, and SQL developer.
-    All of the work I have done has been within secure environments
-    and is not directly accessible for viewing.  Below is a
-    descriptive compilation of the project work I have participated in
-    or completed in my career.
-  </div>
 
-  <hr>
+    <div id="intro">
+      I am a full-stack Python/Django, JavaScript, Natural, and SQL developer.
+      All of the work I have done has been within secure environments
+      and is not directly accessible for viewing.  Below is a
+      descriptive compilation of the project work I have participated in
+      or completed in my career.
+    </div>
 
-  <div class="chapter">
-    <p>
-      The University of Texas at Austin Office of the Registrar (2016)
-    </p>
+    <hr>
 
-    <div class="toolbox">
+    <div class="chapter">
+
+        <h2>The University of Texas at Austin Office of the Registrar</h2>
+
+        <button class="collapsible">
+          Modernized Online Course Inventory
+        </button>
+        <div class="content" id="crin">
+          <p>This university of Texas operates with a homegrown system
+            and a highly customized stack of in-house tools and frameworks.</p>
+
+          <p><b>The legacy system:</b>
+            The back end is a mainframe coded with Natural/ADABAS, a
+            procedural language similar to COBOL.
+            Up until 2016, the only way for registrar employees to view the
+            course inventory was using a maiframe interface.
+             Coding the programs that ran each of the
+            mainframe interfaces was a skill of its own.
+            The legacy system is pictured.</p>
+
+             ***** pic of mainframe crin  *****
+
+          <p><b>The new system:</b> would be a modern interface designed with
+            Python and Django.
+            It would also greatly expand the functionality available to users,
+            including a variety of search parameters for the course listing,
+            a comparison function to view and compare
+            semester data for a single course, and a change log. </p>
+
+          <p>Toolbox: <br />
+            Mainframe,
+            Task Manager for batch process automation
+            JCL,
+            Pype,
+            UTDirect framework for consistent user experience,
+            Apollo
+          </p>
+          <div class="tooltip">
+          <img src="{% static 'images/course_inventory_home_page.png' %}" />
+              <span class="tooltiptext">
+                The new course inventory home page. Improvements: <br />
+                <ul>
+                    <li>More search parameters</li>
+                    <li>Modernized, user friendly</li>
+                    <li>Filters available</li>
+                    <li>Form input scrubbed </li>
+                </ul>
+              </span>
+          </div>
+          <img src="{% static 'images/crin_semester_comparison.png' %}" />
+          <img src="{% static 'images/crin_change_log.png' %}" />
+        </div>
+
+        <button class="collapsible">
+          Mainframe Log File
+        </button>
+        <div class="content">
+          <p></p>
+
+          <p>Toolbox: <br />
+            Mainframe,
+            Task Manager for batch process automation
+            JCL,
+            Pype,
+            UTDirect framework for consistent user experience,
+            Apollo
+          </p>
+            <img src="{% static 'images/#.png' %}" />
+
+        </div>
+
+        <button class="collapsible">
+          Grades maintenance - legacy programs older than I am
+        </button>
+        <div class="content">
+        </div>
+
+    </div>
+
+    <hr>
+
+    <div class="chapter">
+
+        <h2>The University of Texas at Austin International Office</h2>
+
+        <div class="toolbox">
+          Toolbox:
           Mainframe
           Task Manager // JCL for batch process automation
           Pype
           UTDirect
           Apollo
           Login and streamlined, consistent user Experience
+          Oracle
+          SQL Server
+        </div>
+
+        <button class="collapsible">
+          ERD for study Abroad rewrite
+          server maintenance
+        </button>
+        <div class="content">
+          Test
+        </div>
+
     </div>
 
-    <div class="project">
-      Online Course Inventory
+    <hr>
+
+    <div class="chapter">
+
+        <h2>Dell Technologies</h2>
+
+        <div class="toolbox">
+            Toolbox
+        </div>
+
+        <button class="collapsible">
+          MVC JavaScript SaaS augmentation
+        </button>
+        <div  class="content">
+          Test
+        </div>
+
+        <button class="collapsible">
+          Legacy Systems Documentation
+          Example: Communications Flowchart
+        </button>
+        <div  class="content">
+        </div>
+
+        <button class="collapsible">
+          Training Suite: Custom Emails Videos
+        </button>
+        <div  class="content">
+        </div>
+
     </div>
-
-    <div class="project">
-      Mainframe Log File
-    </div>
-
-    <div class="project">
-      Grades maintenance - legacy programs older than I am
-    </div>
-
-  </div>
-
-  <hr>
-
-  <div class="chapter">
-    <p>
-      The University of Texas at Austin International Office
-    </p>
-
-    <div class="toolbox">
-      Toolbox - display with hover text
-      Mainframe
-      Task Manager // JCL for batch process automation
-      Pype
-      UTDirect
-      Apollo
-      Login and streamlined, consistent user Experience
-      Oracle
-      SQL Server
-    </div>
-
-    <div class="project">
-      ERD for study Abroad rewrite
-      server maintenance
-    </div>
-
-  </div>
-
-
-  <div class="chapter">
-    <p>
-      Dell Technologies
-    </p>
-
-    <div class="toolbox">
-    </div>
-
-    <div class="project">
-      MVC JavaScript SaaS augmentation
-    </div>
-
-    <div class="project">
-      Legacy Systems Documentation
-      Example: Communications Flowchart
-    </div>
-
-    <div class="project">
-      Training Suite:       Custom Emails Videos
-    </div>
-
-  </div>
 
 
 </div>
