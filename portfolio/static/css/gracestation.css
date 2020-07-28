@@ -54,6 +54,12 @@ p{
     color: #777;
 }
 
+li {
+    font: helvetica;
+    color: #777;
+    margin-top: 5px;
+}
+
 .chapter{
     margin: 10px 10px 10px 10px;
     border: 1px black;
@@ -93,16 +99,23 @@ p{
     display: none;
 }
 
-.toolbox_details {
-    display: none;
-}
-
 .toolbox {
     background-color: #008b8b;
-    width: 30%;
+    width: 50%;
     height: 50px;
     text-align: center;
 }
+.toolbox_details {
+    display: none;
+    background-color: white;
+    width: 30%;
+    height:auto;
+    padding-top: 5px;
+    padding-left: 5px;
+    padding-bottom: 5px;
+    margin-left: 100px;
+}
+
 
 .tooltip {
   position: relative;
