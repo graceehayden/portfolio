@@ -107,11 +107,6 @@ tr:nth-child(even) {
     margin-left: 5px;
 }
 
-/*:after {
-  content: "\2796";
-}
-*/
-
 .project_details {
     display: none;
     background-color: white;
@@ -120,7 +115,7 @@ tr:nth-child(even) {
     padding-top: 5px;
     padding-left: 5px;
     padding-bottom: 5px;
-    margin-left: 100px;
+    margin-left: 15px;
     border-radius: 15px;
 }
 
