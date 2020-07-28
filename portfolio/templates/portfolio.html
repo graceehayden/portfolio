@@ -35,14 +35,19 @@
         </div>
     </center>
 
+    <hr>
+
     <div class="chapter">
 
         <h2>The University of Texas at Austin Office of the Registrar</h2>
 
-        <p><b>Toolbox: </b><br />
+        <button onclick="toggleDisplay('toolbox_registrar')" type="button" class="toolbox collapsible">
+          Toolbox
+        </button>
+        <div class="toolbox_details" id="toolbox_registrar">
           Mainframe, Task Manager for change log batch process automation, JCL,
           Pype, UTDirect framework for consistent user experience, Apollo
-        </p>
+        </div>
 
         <button onclick="toggleDisplay('crin')" type="button" class="project_title collapsible">
           Modernized Online Course Inventory
@@ -152,8 +157,10 @@
 
         <h2>The University of Texas at Austin International Office</h2>
 
-        <div class="toolbox">
-          <b>Toolbox:</b>
+        <button onclick="toggleDisplay('toolbox_io')" type="button" class="toolbox collapsible">
+          Toolbox
+        </button>
+        <div class="toolbox_details" id="toolbox_io">
           Mainframe, Task Manager for batch process automation, JCL,
           Pype, UTDirect framework for consistent user Experience,
           Apollo authorization, Oracle, SQL Server
@@ -178,8 +185,10 @@
 
         <h2>Dell Technologies</h2>
 
-        <div class="toolbox">
-          <b>Toolbox:</b>
+        <button onclick="toggleDisplay('toolbox_dell')" type="button" class="toolbox collapsible">
+          Toolbox
+        </button>
+        <div class="toolbox_details" id="toolbox_dell">
           QuickBase SaaS, VBA, Notepad, in-house web server version control
         </div>
 

@@ -11,27 +11,30 @@ body {
 }
 
 hr {
-    margin-top: 20px;
-    width: 40%;
+    margin-top: 35px;
+    margin-bottom: 35px;
+    width: 80%;
 }
 
 h1{
     padding-top: 30px;
     margin-top: 20px;
     text-align: center;
-    font-size: 30px;
-    color:#777;  /* #008b8b; */
+    font-size: 35px;
+    color:#555;  /* #008b8b; */
 }
 
 h2{
-    font-size: 20px;
-    color: #777;;
+    font-size: 25px;
+    color: #555;
+    text-align: center;
 }
 
 button{
     margin-top: 15px;
     padding-left: 15px;
     padding-right: 15px;
+    border-radius: 15px;
 }
 
 div {
@@ -68,31 +71,42 @@ p{
     font-size: 15px;
 }
 
-.active, .collapsible:hover {
-    background-color: #ccc; /* #555 */
+.collapsible:hover {
+    background-color: #ccc;
     color: #555;
 }
+
+.collapsible:after {
+    content: '\02795';
+    font-size: 13px;
+    color: white;
+    float: right;
+    margin-left: 5px;
+}
+
+/*:after {
+  content: "\2796";
+}
+*/
 
 .project_details {
     display: none;
 }
 
-.collapsible:after {
-  content: '\02795';
-  font-size: 13px;
-  color: white;
-  float: right;
-  margin-left: 5px;
+.toolbox_details {
+    display: none;
 }
 
-.active:after {
-  content: "\2796";
+.toolbox {
+    background-color: #008b8b;
+    width: 30%;
+    height: 50px;
+    text-align: center;
 }
 
 .tooltip {
   position: relative;
   display: inline-block;
-  /* border-bottom: 1px dotted black; */
 }
 
 .tooltip .tooltiptext {
