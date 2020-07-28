@@ -21,7 +21,7 @@ def resume(request):
 
 
 def portfolio(request):
-    return render(request, 'portfolio.html', {})
+    return render(request, 'coming_soon.html', {})
 
 
 def travel_inspiration(request):
@@ -29,7 +29,7 @@ def travel_inspiration(request):
 
 
 def inspiration_station(request):
-    return render(request, 'inspiration_station.html', {})
+    return render(request, 'coming_soon.html', {})
 
 
 def function_junction(request):

@@ -107,6 +107,12 @@ tr:nth-child(even) {
     margin-left: 5px;
 }
 
+.middle {
+    position: absolute;
+    transform: translate(-50%, -50%);
+    text-align: center;
+}
+
 .project_details {
     display: none;
     background-color: white;
@@ -196,4 +202,5 @@ tr:nth-child(even) {
   width: 40%;
   text-align: center;
   border: 1px;
+  font-family: "Courier New", Courier, monospace;
 }
