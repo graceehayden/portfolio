@@ -181,11 +181,25 @@ tr:nth-child(even) {
     color: #777;
 }
 
-#resume_link {
+#menu {
+  width: 60px;
+  height: auto;
   float: right;
-  margin-right: 10px;
+  margin-right: -30px;
   margin-top: 10px;
 }
+#menu_contents {
+  width: 60px;
+  height: auto;
+  float: right;
+  margin-right: -60px;
+}
+#menu_contents a {
+  text-decoration: none;
+  color: #555;
+  font: helvetica;
+}
+
 
 #content {
   width: 80%;
@@ -194,17 +208,4 @@ tr:nth-child(even) {
   margin-right: 10%;
   border: 1px;
   background-color: #ffffe8;
-}
-
-#index_header {
-    text-align: center;
-    padding-top: 15% ;
-    font-size: 50px;
-}
-
-#index_content {
-  width: 40%;
-  text-align: center;
-  border: 1px;
-  font-family: "Courier New", Courier, monospace;
 }
