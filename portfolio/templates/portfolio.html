@@ -15,23 +15,11 @@
 
 <div id="content">
 
-<!--
-    <div id="menu">
-      <img onclick="toggleDisplay('menu_contents')" src="static/images/menu.svg"/>
-      <br/>
-      <div id="menu_contents" style="display:none;">
-          <a href="{% url 'resume' %}">Resume</a>
-          <a href="{% url 'portfolio' %}">Portfolio</a>
-          <a href="{% url 'inspiration_station' %}">Personal</a>
-      </div>
-    </div>
--->
     <div  id="banner">
       <h1>Grace Hayden's Portfolio</h1>
     </div>
 
     <center>
-        <div style="color: red;">Work in Progress</div>
         <div id="intro">
           <b>* Full-stack Python/Django, JavaScript, Natural, and SQL developer * </b>
           <br />
@@ -52,10 +40,11 @@
     <div class="chapter">
 
         <h2>The University of Texas at Austin Office of the Registrar</h2>
-
-        <button onclick="toggleDisplay('toolbox_registrar')" type="button" class="toolbox collapsible">
-          Toolbox
-        </button>
+        <center>
+            <button onclick="toggleDisplay('toolbox_registrar')" type="button" class="toolbox collapsible">
+              Toolbox
+            </button>
+        </center>
         <div class="toolbox_details" id="toolbox_registrar">
           <table>
             <tr>
@@ -118,11 +107,11 @@
             </tr>
           </table>
         </div>
-
-        <button onclick="toggleDisplay('crin')" type="button" class="project_title collapsible">
-          Modernized Online Course Inventory
-        </button>
-
+        <center>
+            <button onclick="toggleDisplay('crin')" type="button" class="project_title collapsible">
+              Modernized Online Course Inventory
+            </button>
+        </center>
         <div class="project_details" id="crin">
           <p><b>Background: </b>The university of Texas operates with a homegrown system
             and a highly customized stack of in-house tools and frameworks.
@@ -197,9 +186,11 @@
           </div>
         </div>
 
-        <button onclick="toggleDisplay('grades')" class="project_title collapsible">
-          Stewardship of the University Grades Codebase
-        </button>
+        <center>
+            <button onclick="toggleDisplay('grades')" class="project_title collapsible">
+              Stewardship of the University Grades Codebase
+            </button>
+        </center>
         <div class="project_details" id="grades">
           <p><b>Background:</b>The legacy system keeping the university
             grades process running smoothly is a combination of batch
@@ -275,9 +266,11 @@
 
         <h2>The University of Texas at Austin International Office</h2>
 
-        <button onclick="toggleDisplay('toolbox_io')" type="button" class="toolbox collapsible">
-          Toolbox
-        </button>
+        <center>
+            <button onclick="toggleDisplay('toolbox_io')" type="button" class="toolbox collapsible">
+              Toolbox
+            </button>
+        </center>
         <div class="toolbox_details" id="toolbox_io">
 
           <table>
@@ -295,10 +288,12 @@
             </tr>
           </table>
         </div>
-
-        <button onclick="toggleDisplay('study_abroad')" class="project_title collapsible">
-          Redesign of Study Abroad Portal
-        </button>
+        </center>
+        <center>
+            <button onclick="toggleDisplay('study_abroad')" class="project_title collapsible">
+              Redesign of Study Abroad Portal
+            </button>
+        </center>
         <div class="project_details" id="study_abroad">
           <p><b>Background: </b>The study abroad interface was created when
           WebAgent was a commonly used language on campus. WebAgent had been
@@ -321,10 +316,12 @@
     <div class="chapter">
 
         <h2>Dell Technologies</h2>
+        <center>
+            <button onclick="toggleDisplay('toolbox_dell')" type="button" class="toolbox collapsible">
+              Toolbox
+            </button>
+        </center>
 
-        <button onclick="toggleDisplay('toolbox_dell')" type="button" class="toolbox collapsible">
-          Toolbox
-        </button>
         <div class="toolbox_details" id="toolbox_dell">
           <table>
             <tr>
@@ -343,10 +340,11 @@
             </tr>
           </table>
         </div>
-
-        <button onclick="toggleDisplay('quickbase')" class="project_title collapsible">
-          Augmentation of SaaS Functionality for Custom Applications
-        </button>
+        <center>
+            <button onclick="toggleDisplay('quickbase')" class="project_title collapsible">
+              Augmentation of SaaS Functionality for Custom Applications
+            </button>
+        </center>
         <div  class="project_details" id="quickbase">
           <p><b>Background: </b>
           </p>
@@ -355,9 +353,11 @@
 
         </div>
 
-        <button onclick="toggleDisplay('documentation')" class="project_title collapsible">
-          Legacy Systems Documentation
-        </button>
+        <center>
+            <button onclick="toggleDisplay('documentation')" class="project_title collapsible">
+              Legacy Systems Documentation
+            </button>
+        </center>
         <div  class="project_details" id="documentation">
           <p><b>Background: </b>
           </p>
@@ -366,9 +366,11 @@
 
         </div>
 
-        <button onclick="toggleDisplay('training_suite')" class="project_title collapsible">
-          Training Suite
-        </button>
+        <center>
+            <button onclick="toggleDisplay('training_suite')" class="project_title collapsible">
+              Training Suite
+            </button>
+        </center>
         <div  class="project_details" id="training_suite">
           <p><b>Background: </b></p>
 
