@@ -1,33 +1,14 @@
 body {
     font: helvetica;
     height: 100%;
-    background-image: url("/static/images/coming_soon_background.png");
+    width: auto;
+    background-image: url("/static/images/galveston_pier.png");
     background-position: center;
     background-size: cover;
     background-attachment: fixed;
     position: absolute;
     font-size: 25px;
     overflow: scroll;
-}
-
-hr {
-    margin-top: 35px;
-    margin-bottom: 35px;
-    width: 80%;
-}
-
-h1{
-    padding-top: 30px;
-    margin-top: 20px;
-    text-align: center;
-    font-size: 35px;
-    color:#555;  /* #008b8b; */
-}
-
-h2{
-    font-size: 25px;
-    color: #555;
-    text-align: center;
 }
 
 button{
@@ -40,6 +21,47 @@ button{
 
 div {
     margin-top: 15px;
+}
+
+footer {
+  background-color: #555;
+  text-align: right;
+  height: 5px;
+  width: 80%;
+  font-size: 16px;
+  margin-left: 10%;
+  margin-right: 10%;
+  margin-bottom: 10%;
+  padding-bottom: 10%;
+}
+
+footer a {
+    color: white;
+    text-decoration: none;
+    font: helvetica;
+    padding-right: 50%;
+    padding-bottom: 50%;
+}
+
+
+h1{
+    padding-top: 30px;
+    margin-top: 20px;
+    text-align: center;
+    font-size: 35px;
+    color:#555;  /* #008b8b; */
+}
+
+hr {
+    margin-top: 35px;
+    margin-bottom: 35px;
+    width: 80%;
+}
+
+h2{
+    font-size: 25px;
+    color: #555;
+    text-align: center;
 }
 
 img {
@@ -55,9 +77,6 @@ p{
     color: #777;
 }
 
-ul {
-    font: helvetica;
-}
 table {
     font: helvetica;
     color: #777;
@@ -79,6 +98,10 @@ th, td {
 
 tr:nth-child(even) {
     background-color: #f2f2f2;
+}
+
+ul {
+    font: helvetica;
 }
 
 .chapter{
@@ -111,6 +134,15 @@ tr:nth-child(even) {
     float: right;
 }
 
+.error {
+    color: red;
+}
+
+.help {
+    margin-right: 10%;
+    color:  #555;
+}
+
 .middle {
     position: absolute;
     transform: translate(-50%, -50%);
@@ -129,6 +161,10 @@ tr:nth-child(even) {
     border-radius: 15px;
 }
 
+.success {
+  color: #008b8b;
+}
+
 .toolbox {
     background-color: #008b8b;
     width: 50%;
@@ -144,7 +180,6 @@ tr:nth-child(even) {
     padding-bottom: 5px;
     width: 70%;
 }
-
 
 .tooltip {
   position: relative;

@@ -1,0 +1,63 @@
+{% load static %}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-173909279-1"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'UA-173909279-1');
+    </script>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta charset="utf-8">
+
+    <script type="text/javascript" src="{% static 'js/gracestation.js' %}"></script>
+    <link rel="stylesheet" href="{% static 'css/gracestation.css' %}">
+
+    <title>Grace Station</title>
+
+</head>
+
+<body>
+
+  {% if messages %}
+    {% for message in messages %}
+      {% if message.level == DEFAULT_MESSAGE_LEVELS.ERROR %}
+        <div class="error">{{message}}</div>
+      {% else %}
+        <div class="success">{{message}}</div>
+      {% endif %}
+    {% endfor %}
+  {% endif %}
+
+  <div id="menu">
+      <img onclick="toggleDisplay('menu_contents')" src="static/images/menu.svg"/>
+      <div id="menu_contents" style="display:none;">
+          <a href="{% url 'resume' %}">Resume</a>
+          <a href="{% url 'portfolio' %}">Portfolio</a>
+          <a href="{% url 'inspiration_station' %}">Personal</a>
+      </div>
+  </div>
+
+  <div id="content">
+
+      {% block content %}
+
+      {% endblock %}
+      
+  </div>
+
+  <footer>
+    {% if user.is_active %}
+      <a href="{% url 'signout' %}">Logout</a>
+    {% else %}
+      <a href="{% url 'user_login' %}">Login</a>
+    {% endif %}
+  </footer>
+</body>
+</html>

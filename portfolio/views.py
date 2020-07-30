@@ -1,11 +1,59 @@
-from django.shortcuts import render, render_to_response
+from django.shortcuts import render, render_to_response, redirect
+from django.contrib.auth import authenticate, login
+from django.contrib.auth.forms import UserCreationForm, AuthenticationForm
+from django.contrib.auth import logout
+from django.contrib import messages
 from django.utils import timezone
 from django.template import RequestContext
-from .models import Post
-from .functions import *
 from .models import *
+from .functions import *
 from .forms import *
 import random
+
+
+def user_signup(request):
+    if request.user.is_active:
+        return redirect('portfolio')
+    if request.method == 'POST':
+        form = UserCreationForm(request.POST)
+        if form.is_valid():
+            form.save()
+            username = form.cleaned_data.get('username')
+            password = form.cleaned_data.get('password1')
+            user = authenticate(username=username, password=password)
+            login(request, user)
+            return redirect('portfolio')
+        else:
+            return render(request, 'user_signup.html', {'form': form})
+    else:
+        form = UserCreationForm()
+        return render(request, 'user_signup.html', {'form': form})
+
+
+def user_login(request):
+    if request.method == 'POST':
+        form = AuthenticationForm(request=request, data=request.POST)
+        if form.is_valid():
+            username = form.cleaned_data.get('username')
+            password = form.cleaned_data.get('password')
+            user = authenticate(username=username, password=password)
+            if user is not None:
+                login(request, user)
+                messages.info(request, f"You are now logged in as {username}")
+                return redirect('portfolio')
+            else:
+                messages.error(request, "Invalid username or password.")
+        else:
+            messages.error(request, "Invalid username or password.")
+    form = AuthenticationForm()
+    return render(request = request,
+                    template_name = "user_login.html",
+                    context={"form":form})
+
+
+def signout(request):
+    logout(request)
+    return redirect('index')
 
 
 def index(request):
@@ -21,15 +69,18 @@ def resume(request):
 
 
 def portfolio(request):
-    return render(request, 'portfolio.html', {})
-
-
-def travel_inspiration(request):
-    return render(request, 'travel_inspiration.html', {})
+    if request.user.is_active:
+        return render(request, 'portfolio.html', {})
+    else:
+        return redirect('user_login')
 
 
 def inspiration_station(request):
     return render(request, 'coming_soon.html', {})
+
+
+def travel_inspiration(request):
+    return render(request, 'travel_inspiration.html', {})
 
 
 def function_junction(request):

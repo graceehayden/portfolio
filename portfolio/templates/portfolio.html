@@ -22,6 +22,17 @@
 </head>
 
 <body>
+
+  {% if messages %}
+    {% for message in messages %}
+      {% if message.level == DEFAULT_MESSAGE_LEVELS.ERROR %}
+        <div class="error">{{message}}</div>
+      {% else %}
+        <div class="success">{{message}}</div>
+      {% endif %}
+    {% endfor %}
+  {% endif %}
+
   <div id="menu">
       <img onclick="toggleDisplay('menu_contents')" src="static/images/menu.svg"/>
       <div id="menu_contents" style="display:none;">
@@ -401,5 +412,14 @@
 
 
 </div>
+
+<footer>
+  {% if user.is_active %}
+    <a href="{% url 'signout' %}">Logout</a>
+  {% else %}
+    <a href="{% url 'user_login' %}">Login</a>
+  {% endif %}
+</footer>
+
 </body>
 </html>
