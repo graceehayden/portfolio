@@ -17,28 +17,43 @@
     <meta charset="utf-8">
 
     <script type="text/javascript" src="{% static 'js/gracestation.js' %}"></script>
-    <link rel="stylesheet" href="{% static 'css/gracestation.css' %}">
+    <link rel="stylesheet" href="{% static 'css/gracestation.css' %}" />
 
     <style>
 
-        .help {
-          color: #777;
-        }
-        #menu a {
-            color: #555;
-        }
+          .help, ul {
+            color: #777;
+          }
 
-        #auth_form_content {
-            width: 60%;
-            margin-top: 10%;
-            margin-left: 15%;
-            text-align: center;
-            background-color: white;
-            position: fixed;
-            border: 1px black solid;
-            font-size: 16px;
-        }
+          #menu a {
+              color: #555;
+          }
 
+          #auth_form_content {
+              width: 60%;
+              margin-top: 10%;
+              margin-left: 15%;
+              text-align: center;
+              background-color: white;
+              position: fixed;
+              border: 1px black solid;
+              font-size: 16px;
+          }
+
+          label {
+            color:#555;
+            font: helvetica;
+          }
+
+          #button {
+              background-color: #777;
+              color: white;
+              padding: 16px 26px;
+              text-decoration: none;
+              margin: 4px 2px;
+              cursor: pointer;
+              border-radius: 15px;
+            }
     </style>
     <title>Grace Station</title>
 
@@ -57,7 +72,7 @@
   {% endif %}
 
   <div id="menu">
-      <img onclick="toggleDisplay('menu_contents')" src="static/images/menu.svg"/>
+      <img id="menu_icon" click="toggleDisplay('menu_contents')" src="static/images/menu.svg"/>
       <div id="menu_contents" style="display:none;">
           <a href="{% url 'index' %}">Home</a>
           <a href="{% url 'resume' %}">Resume</a>
@@ -82,7 +97,7 @@
                     {% endif %}
                 </div>
             {% endfor %}
-            <input type="submit" value="Submit">
+            <input id="button" type="submit" value="Submit">
         </form>
 
         <p>Already a user?  <a href="{% url 'user_login' %}">Login</a></p>

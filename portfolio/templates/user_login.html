@@ -17,7 +17,7 @@
     <meta charset="utf-8">
 
     <script type="text/javascript" src="{% static 'js/gracestation.js' %}"></script>
-    <link rel="stylesheet" href="{% static 'css/gracestation.css' %}">
+    <link rel="stylesheet" href="{% static 'css/gracestation.css' %}" />
 
     <style>
 
@@ -35,6 +35,21 @@
             border: 1px black solid;
             font-size: 16px;
         }
+
+        label {
+          color:#555;
+          font: helvetica;
+        }
+
+        #button {
+            background-color: #777;
+            color: white;
+            padding: 16px 26px;
+            text-decoration: none;
+            margin: 4px 2px;
+            cursor: pointer;
+            border-radius: 15px;
+            }
 
     </style>
     <title>Grace Station</title>
@@ -56,7 +71,7 @@
   <div id="menu">
       <img id="menu_icon" onclick="toggleDisplay('menu_contents')" src="static/images/menu.svg"/>
       <div id="menu_contents" style="display:none;">
-          <a href="{% url 'index' %}">Home</a>        
+          <a href="{% url 'index' %}">Home</a>
           <a href="{% url 'resume' %}">Resume</a>
           <a href="{% url 'portfolio' %}">Portfolio</a>
           <a href="{% url 'inspiration_station' %}">Personal</a>
@@ -82,7 +97,8 @@
                     {% endif %}
                 </div>
             {% endfor %}
-            <input type="submit" value="Submit">
+            <br />
+            <input id="button" type="submit" value="Submit">
         </form>
 
         <p>Need an Account?  <a href="{% url 'user_signup' %}">Sign Up</a></p>
