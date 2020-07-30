@@ -1,38 +1,12 @@
-{% load static %}
+{% extends 'base.html' %}
 
-<!DOCTYPE html>
+{% block content %}
 
-<html>
-<head>
-    <title>International Grace Station</title>
-
-    <script type="text/javascript" src="{% static 'js/gracestation.js' %}" />
-
-    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
-    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css">
-    <link rel="stylesheet" href="{% static 'css/gracestation.css' %}">
-</head>
-
-<body>
-  <div class="bgimg">
-
-    <div id="resume_link">
-      Grace Hayden
-      <br />
-    </div>
-
-    <div class="middle">
+    <div>
       places i’ve enjoyed visiting - moments spent there and why they invoke comfort or coziness
-	•	see a setting and make up a scene - imagination station - collected images i like and can talk about why
-      <h1><a href="{% url 'videos' %}">Family Home Videos</a></h1>
-      <hr />
-      <h1><a href="{% url 'travel_inspiration' %}">Travel Inspiration</a></h1>
-      <hr />
-      <h1><a href="{% url 'inspiration_station' %}">Inspiration Station</a></h1>
-    </div>
+	     see a setting and make up a scene - imagination station - collected images i like and can talk about why
+
 
   </div>
 
-</body>
-
-</html>
+{% endblock %}

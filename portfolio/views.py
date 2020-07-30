@@ -18,7 +18,7 @@ def index(request):
 
 def user_signup(request):
     if request.user.is_active:
-        return redirect('index')
+        return redirect('porfolio')
     if request.method == 'POST':
         form = UserCreationForm(request.POST)
         if form.is_valid():
@@ -27,7 +27,7 @@ def user_signup(request):
             password = form.cleaned_data.get('password1')
             user = authenticate(username=username, password=password)
             login(request, user)
-            return redirect('index')
+            return redirect('portfolio')
         else:
             return render(request, 'user_signup.html', {'form': form})
     else:
@@ -47,7 +47,7 @@ def user_login(request):
             if user is not None:
                 login(request, user)
                 messages.info(request, f"You are now logged in as {username}")
-                return redirect(index)
+                return redirect('portfolio')
             else:
                 messages.error(request, "Invalid username or password.")
         else:
