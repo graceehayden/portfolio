@@ -82,10 +82,6 @@ def inspiration_station(request):
     return render(request, 'coming_soon.html', {})
 
 
-def travel_inspiration(request):
-    return render(request, 'travel_inspiration.html', {})
-
-
 def function_junction(request):
     return render(request, 'function_junction.html', {})
 
@@ -98,11 +94,6 @@ def palindromes(request):
     return render(request, 'function_junction.html', {'answer': answer})
 
 
-def post_list(request):
-    posts = Post.objects.order_by('published_date')[:3]
-    return render(request, 'function_junction.html', {'posts': posts})
-
-
 def merge_and_sort_lists(request):
     if 'submit' in request.GET:
         list1 = [random.randrange(1, 50, 1) for i in range(7)]
@@ -113,32 +104,8 @@ def merge_and_sort_lists(request):
                                                       'list2': list2})
 
 
-def videos(request):
-    request.session['page'] = 'videos'
-    if not request.user.is_active:
-        return redirect('user_login')
-    else:
-        form= VideoForm(request.POST or None, request.FILES or None)
-        if form.is_valid():
-            form.save()
-
-        videos = []
-        videos = Video.objects.all()
-        print(videos)
-        context= {
-                  'videos': videos,
-                  'form': form
-                  }
-        return render(request, 'videos.html', context)
-
-
-
 def error(request):
     return render(request, 'error.html', {})
-
-#def hello_pallet(request):
-#    posts = Post.objects.order_by('published_date')
-#    return render(request, 'hello_pallet.html', {'posts': posts})
 
 
 #def handler404(request, *args, **argv):
