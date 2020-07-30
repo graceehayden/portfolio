@@ -1,3 +1,8 @@
+a {
+  color: white;
+  text-decoration: none;
+}
+
 body, html {
  height: 100%
 }
@@ -23,11 +28,6 @@ hr {
     left: 50%;
     transform: translate(-50%, -50%);
     text-align: center;
-}
-
-hr {
-    margin: auto;
-    width: 40%;
 }
 
 #resume_link {

@@ -34,12 +34,13 @@
   {% endif %}
 
   <div id="menu">
-      <img onclick="toggleDisplay('menu_contents')" src="static/images/menu.svg"/>
-      <div id="menu_contents" style="display:none;">
-        <a href="{% url 'resume' %}">Resume</a>
-        <a href="{% url 'portfolio' %}">Portfolio</a>
-        <a href="{% url 'inspiration_station' %}">Personal</a>
-      </div>
+    <img id="menu_icon" onclick="toggleDisplay('menu_contents')" src="static/images/menu.svg"/>
+    <div id="menu_contents" style="display:none;">
+      <a href="{% url 'index' %}">Home</a>      
+      <a href="{% url 'resume' %}">Resume</a>
+      <a href="{% url 'portfolio' %}">Portfolio</a>
+      <a href="{% url 'inspiration_station' %}">Personal</a>
+    </div>
   </div>
 
 <div id="content">
@@ -335,7 +336,6 @@
           between the heads of the study abroad program and the developers
           for the purpose of gathering requirements. </p>
 
-
         </div>
 
     </div>
@@ -413,13 +413,13 @@
 
 </div>
 
-<footer>
+<div id="footer">
   {% if user.is_active %}
     <a href="{% url 'signout' %}">Logout</a>
   {% else %}
     <a href="{% url 'user_login' %}">Login</a>
   {% endif %}
-</footer>
+</div>
 
 </body>
 </html>

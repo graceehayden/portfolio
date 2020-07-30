@@ -1,16 +1,4 @@
-{% load static %}
-
-<!doctype html>
-
-<html lang="en">
-<head>
-  <meta charset="utf-8">
-  <link rel="stylesheet" href="{% static 'css/gracestation.css' %}">
-  <title>Hayden Family Videos</title>
-
-</head>
-
-<body>
+{% extends 'base.html' %}
 
   <h1>Upload A Video</h1>
   <form enctype="multipart/form-data" method="POST" action="{% url 'videos' %}">
@@ -22,17 +10,13 @@
   <br><br>
 
   {% for video in videos %}
-    {{ video.verbose_name }}
+      {{ video.verbose_name }}
 
-    <video width='400' controls>
-      <source src='{{ media_url }}{{ video.verbose_name }}' type='video/mp4'>
-    <!--<source src='{{ MEDIA_URL }}{{ video }}' type='video/mp4'>-->
-    </video>
+      <video width='400' controls>
+        <source src='{{ media_url }}{{ video.verbose_name }}' type='video/mp4'>
+      <!--<source src='{{ MEDIA_URL }}{{ video }}' type='video/mp4'>-->
+      </video>
   {% endfor %}
-  <br><br>
-  </p>
 
- </body>
- <script>'undefined'=== typeof _trfq || (window._trfq = []);'undefined'=== typeof _trfd && (window._trfd=[]),_trfd.push({'tccl.baseHost':'secureserver.net'}),_trfd.push({'ap':'cpsh'},{'server':'p3plcpnl0769'}) // Monitoring performance to make your website faster. If you want to opt-out, please contact web hosting support.</script><script src='https://img1.wsimg.com/tcc/tcc_l.combined.1.0.6.min.js'></script></html>
 
- </html>
+  <script>'undefined'=== typeof _trfq || (window._trfq = []);'undefined'=== typeof _trfd && (window._trfd=[]),_trfd.push({'tccl.baseHost':'secureserver.net'}),_trfd.push({'ap':'cpsh'},{'server':'p3plcpnl0769'}) // Monitoring performance to make your website faster. If you want to opt-out, please contact web hosting support.</script><script src='https://img1.wsimg.com/tcc/tcc_l.combined.1.0.6.min.js'></script></html>

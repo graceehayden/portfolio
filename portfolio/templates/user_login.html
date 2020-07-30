@@ -54,7 +54,7 @@
   {% endif %}
 
   <div id="menu">
-      <img onclick="toggleDisplay('menu_contents')" src="static/images/menu.svg"/>
+      <img id="menu_icon" onclick="toggleDisplay('menu_contents')" src="static/images/menu.svg"/>
       <div id="menu_contents" style="display:none;">
           <a href="{% url 'resume' %}">Resume</a>
           <a href="{% url 'portfolio' %}">Portfolio</a>
@@ -70,6 +70,7 @@
           without creating an account. </p>
         <p>Thanks for viewing! </p>
         <form action="/user_login" method="post">
+            <input type="hidden" name="redirect_view" value="{{ redirect_view }}" />
             {% csrf_token %}
             {% for field in form %}
                 <div class="fieldWrapper">

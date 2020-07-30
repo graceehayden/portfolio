@@ -11,9 +11,14 @@ from .forms import *
 import random
 
 
+def index(request):
+    ''' Home page '''
+    return render(request, 'index.html', {})
+
+
 def user_signup(request):
     if request.user.is_active:
-        return redirect('portfolio')
+        return redirect('index')
     if request.method == 'POST':
         form = UserCreationForm(request.POST)
         if form.is_valid():
@@ -22,15 +27,17 @@ def user_signup(request):
             password = form.cleaned_data.get('password1')
             user = authenticate(username=username, password=password)
             login(request, user)
-            return redirect('portfolio')
+            return redirect('index')
         else:
             return render(request, 'user_signup.html', {'form': form})
     else:
         form = UserCreationForm()
-        return render(request, 'user_signup.html', {'form': form})
+        return render(request, 'user_signup.html', {'form': form,
+                                                    })
 
 
 def user_login(request):
+    # redirect_view = str(request.POST.get('redirect_view'))
     if request.method == 'POST':
         form = AuthenticationForm(request=request, data=request.POST)
         if form.is_valid():
@@ -40,7 +47,7 @@ def user_login(request):
             if user is not None:
                 login(request, user)
                 messages.info(request, f"You are now logged in as {username}")
-                return redirect('portfolio')
+                return redirect(index)
             else:
                 messages.error(request, "Invalid username or password.")
         else:
@@ -54,10 +61,6 @@ def user_login(request):
 def signout(request):
     logout(request)
     return redirect('index')
-
-
-def index(request):
-    return render(request, 'index.html', {})
 
 
 def coming_soon(request):
@@ -111,24 +114,22 @@ def merge_and_sort_lists(request):
 
 
 def videos(request):
+    request.session['page'] = 'videos'
+    if not request.user.is_active:
+        return redirect('user_login')
+    else:
+        form= VideoForm(request.POST or None, request.FILES or None)
+        if form.is_valid():
+            form.save()
 
-    #if 'submit' in request.POST:
-    #    name = request.POST('name')
-    #    videofile = request.POST('videofile')
-
-    form= VideoForm(request.POST or None, request.FILES or None)
-    if form.is_valid():
-        form.save()
-
-    videos = []
-    videos = Video.objects.all()
-    print(videos)
-    context= {
-              'videos': videos,
-              'form': form
-              }
-
-    return render(request, 'videos.html', context)
+        videos = []
+        videos = Video.objects.all()
+        print(videos)
+        context= {
+                  'videos': videos,
+                  'form': form
+                  }
+        return render(request, 'videos.html', context)
 
 
 
