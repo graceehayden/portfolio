@@ -22,6 +22,14 @@
 </head>
 
 <body>
+  <div id="menu">
+      <img onclick="toggleDisplay('menu_contents')" src="static/images/menu.svg"/>
+      <div id="menu_contents" style="display:none;">
+        <a href="{% url 'resume' %}">Resume</a>
+        <a href="{% url 'portfolio' %}">Portfolio</a>
+        <a href="{% url 'inspiration_station' %}">Personal</a>
+      </div>
+  </div>
 
 <div id="content">
 
@@ -54,7 +62,6 @@
             <button onclick="toggleDisplay('toolbox_registrar')" type="button" class="toolbox collapsible">
               Toolbox
             </button>
-        </center>
         <div class="toolbox_details" id="toolbox_registrar">
           <table>
             <tr>
@@ -117,6 +124,8 @@
             </tr>
           </table>
         </div>
+        </center>
+
         <center>
             <button onclick="toggleDisplay('crin')" type="button" class="project_title collapsible">
               Modernized Online Course Inventory
@@ -280,25 +289,24 @@
             <button onclick="toggleDisplay('toolbox_io')" type="button" class="toolbox collapsible">
               Toolbox
             </button>
-        </center>
         <div class="toolbox_details" id="toolbox_io">
-
           <table>
-            <tr>
-              <th>Same as above</th>
-              <td>See Registrar Tools</td>
-            </tr>
-            <tr>
-              <th>Oracle/SQL</th>
-              <td>Replacement for ADABAS/Natural back-end.</td>
-            </tr>
-            <tr>
-              <th>Microsoft SQL Server</th>
-              <td>Server Maintenance.</td>
-            </tr>
+              <tr>
+                <th>Same as above</th>
+                <td>See Registrar Tools</td>
+              </tr>
+              <tr>
+                <th>Oracle/SQL</th>
+                <td>Replacement for ADABAS/Natural back-end.</td>
+              </tr>
+              <tr>
+                <th>Microsoft SQL Server</th>
+                <td>Server Maintenance.</td>
+              </tr>
           </table>
         </div>
         </center>
+
         <center>
             <button onclick="toggleDisplay('study_abroad')" class="project_title collapsible">
               Redesign of Study Abroad Portal
@@ -330,26 +338,27 @@
             <button onclick="toggleDisplay('toolbox_dell')" type="button" class="toolbox collapsible">
               Toolbox
             </button>
+
+            <div class="toolbox_details" id="toolbox_dell">
+              <table>
+                <tr>
+                  <th>QuickBase</th>
+                  <td>Software platform. A Dell instance has been customized and
+                    is cloned to create individual project instances that are
+                    further customized to each project's requirements. </td>
+                </tr>
+                <tr>
+                  <th>VBA</th>
+                  <td>Excel workbooks used for import/export of application data</td>
+                </tr>
+                <tr>
+                  <th>Notepad</th>
+                  <td>IDE of choice</td>
+                </tr>
+              </table>
+            </div>
         </center>
 
-        <div class="toolbox_details" id="toolbox_dell">
-          <table>
-            <tr>
-              <th>QuickBase</th>
-              <td>Software platform. A Dell instance has been customized and
-                is cloned to create individual project instances that are
-                further customized to each project's requirements. </td>
-            </tr>
-            <tr>
-              <th>VBA</th>
-              <td>Excel workbooks used for import/export of application data</td>
-            </tr>
-            <tr>
-              <th>Notepad</th>
-              <td>IDE of choice</td>
-            </tr>
-          </table>
-        </div>
         <center>
             <button onclick="toggleDisplay('quickbase')" class="project_title collapsible">
               Augmentation of SaaS Functionality for Custom Applications

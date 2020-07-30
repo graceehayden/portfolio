@@ -11,17 +11,26 @@
 
           gtag('config', 'UA-173909279-1');
         </script>
-        <meta name="viewport" content="width=device-width, initial-scale=1"> 
+        <meta name="viewport" content="width=device-width, initial-scale=1">
         <script type="text/javascript" src="{% static 'js/gracestation.js' %}"></script>
         <link rel="stylesheet" href="{% static 'css/resume_style.css' %}">
 
         <title>Grace Hayden</title>
     </head>
     <body>
+      <div id="menu">
+          <img onclick="toggleDisplay('menu_contents')" src="static/images/menu.svg"/>
+          <div id="menu_contents" style="display:none;">
+            <a href="{% url 'resume' %}">Resume</a>
+            <a href="{% url 'portfolio' %}">Portfolio</a>
+            <a href="{% url 'inspiration_station' %}">Personal</a>
+          </div>
+      </div>
+
         <div id="content">
             <div id="contact_info">
-            Grace E. Hayden <br />
-            GraceEHayden@gmail.com <br />
+            Grace E. Hayden <br /> <br />
+            GraceEHayden@gmail.com <br /><br />
             Austin, TX <br />
             </div>
 
