@@ -51,12 +51,15 @@ def upload_song(request):
 def playlist(request):
     songs = Song.objects.all()
 
-    #Song.objects.get(title="I Don't Want to Walk Away Without You").delete()
+    songs_delete = []
+    songs_delete = Song.objects.filter(title="I Can Dream")
+    songs_delete.delete()
     songs_dict = {}
     for song in songs:
         title = song.title
         file = song.songfile
         songs_dict.update( {title : file.url} )
+    print(songs_dict)
     return render(request, 'playlist.html', {'songs': songs_dict })
 
 
@@ -71,7 +74,6 @@ def videos(request):
 
         videos = []
         videos = Video.objects.all()
-        print(videos)
         context= {
                   'videos': videos,
                   'form': form
