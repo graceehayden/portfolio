@@ -43,20 +43,20 @@ def upload_song(request):
                 return render(request, 'upload_song.html')
             song.save()
             messages.success(request, "Song successfully uploaded.")
-            
+
     context = {"form": form,}
     return render(request, 'upload_song.html', context)
 
 
 def playlist(request):
     songs = Song.objects.all()
-    #Song.objects.get(title="A SONG").delete()
+
+    #Song.objects.get(title="I Don't Want to Walk Away Without You").delete()
     songs_dict = {}
     for song in songs:
         title = song.title
         file = song.songfile
         songs_dict.update( {title : file.url} )
-    print(songs_dict)
     return render(request, 'playlist.html', {'songs': songs_dict })
 
 
