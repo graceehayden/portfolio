@@ -52,7 +52,7 @@ def upload_song(request):
 
 def playlist(request):
     songs = Song.objects.all()
-    # Song.objects.all().delete()
+    #Song.objects.get(title="A SONG").delete()
     songs_dict = {}
     for song in songs:
         title = song.title

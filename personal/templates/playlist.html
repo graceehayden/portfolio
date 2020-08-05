@@ -28,6 +28,8 @@
             position: relative;
             font-family: "Courier New", Courier, monospace;
             font-size: 25px;
+            overflow: scroll;
+
         }
 
         .middle {
@@ -80,6 +82,12 @@
     </div>
 
     <div class="middle" style="color:white;">
+      <div style="background-color: black; border-radius: 15px; padding: 10px 10px 10px 10px;">
+      <h1>Spooky Oldies</h1>
+      <p style="font-size: 16px;">I have added reverb to some oldies and slowed them down.
+        They're haunted now.  Enjoy!</p>
+      </div>
+        <br>
       {% for song, file in songs.items %}
           <div>
             {{ song }} <br />
