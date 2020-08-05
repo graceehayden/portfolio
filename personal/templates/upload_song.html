@@ -1,0 +1,22 @@
+{% extends 'template.html' %}
+
+{% block content %}
+
+<form action="upload_song" method="post" enctype="multipart/form-data">
+    {% csrf_token %}
+    {% for field in form %}
+        <div class="error">
+            {{ field.errors }}
+        </div>
+        <div>
+            {{ field.label_tag }} {{ field }}
+            {% if field.help_text %}
+            <p class="help">{{ field.help_text|safe }}</p>
+            {% endif %}
+        </div>
+    {% endfor %}
+    <br />
+    <input id="button" type="submit" value="Submit">
+</form>
+
+{% endblock %}
