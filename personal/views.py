@@ -42,11 +42,9 @@ def upload_song(request):
                 messages.error(request, "You cannot upload a song with that file type.")
                 return render(request, 'upload_song.html')
             song.save()
-            print('song: ' + song.title)
-            print('file: ' + str(song.songfile))
-            return redirect('playlist')
+            messages.success(request, "Song successfully uploaded.")
+            
     context = {"form": form,}
-    print('here')
     return render(request, 'upload_song.html', context)
 
 
