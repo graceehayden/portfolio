@@ -1,0 +1,178 @@
+{% load static %}
+
+<!DOCTYPE html>
+    <head>
+        <!-- Global site tag (gtag.js) - Google Analytics -->
+        <script async src="https://www.googletagmanager.com/gtag/js?id=UA-173909279-1"></script>
+        <script>
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments);}
+          gtag('js', new Date());
+
+          gtag('config', 'UA-173909279-1');
+        </script>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <script type="text/javascript" src="{% static 'js/gracestation.js' %}"></script>
+        <link rel="stylesheet" href="{% static 'css/resume_style.css' %}">
+
+        <title>Grace Hayden</title>
+    </head>
+    <body>
+      <div id="menu">
+      <img id="menu_icon" onclick="toggleDisplay('menu_contents')" src="static/images/menu.svg"/>
+      <div id="menu_contents" style="display:none;">
+        <a href="{% url 'index' %}">Home</a>
+        <a href="{% url 'resume' %}">Resume</a>
+        <a href="{% url 'portfolio' %}">Portfolio</a>
+        <a href="/personal/home">Personal</a>
+      </div>
+    </div>
+
+        <div id="content">
+            <div id="contact_info">
+            Grace E. Hayden <br /> <br />
+            GraceEHayden@gmail.com <br /><br />
+            Austin, TX <br />
+            </div>
+
+            <hr />
+
+            <div id="resume_title">
+                <h1>Software Developer</h1>
+            </div>
+
+            <hr />
+
+            <div class="section_heading">Skills / Expertise :</div>
+            <div class="column1">
+                <ul>
+                    <li onMouseOver="show('python')" onMouseOut="hide('python')">
+                        <a  target="_blank" style="text-decoration: none; color: black;" href="https://github.com/graceehayden/">
+                          Python
+                        </a>
+                        <div class="examples_popup" id="python">
+                          Aspiring member of The Ministry of Silly Walks
+                        </div>
+                    </li>
+                    <li>Django</li>
+                    <li>Effective UI via Accessible HTML/CSS </li>
+                    <li>Git</li>
+                    <li onMouseOver="show('git_url')" onMouseOut="hide('git_url')">
+                        <a  target="_blank" style="text-decoration: none; color: black;" href="https://github.com/graceehayden/">
+                          Version Control
+                        </a>
+                        <div class="examples_popup" id="git_url">
+                          Click to view my Github
+                        </div>
+                    </li>
+                    <li>SQL</li>
+                </ul>
+            </div>
+            <div class="column2">
+                <ul>
+                  <li>RESTful APIs</li>
+                  <li onMouseOver="show('js_examples')" onMouseOut="hide('js_examples')">
+                    JavaScript
+                    <div class="examples_popup" id="js_examples">
+                        <b><u>Examples:</u></b>
+                        <br />
+                        <ul>
+                          <li>MVC structure: SaaS functionality augmentation</li>
+                          <li>API calls</li>
+                          <li>Informational popups</li>
+                          <li>Toggle display</li>
+                          <li>Replace text translations</li>
+                          <li>UI styling</li>
+                      </ul>
+                    </div>
+                  </li>
+                  <li>Batch Processing and Task Management</li>
+                    <li>MVC Architecture </li>
+                    <li>Documentation and ERDs</li>
+                    <li>Stewardship </li>
+                    <li>Google Analytics</li>
+
+                </ul>
+            </div>
+            <div class="column3">
+                <ul>
+                  <li>Server Maintenance </li>
+                  <li>Kanban, Jira</li>
+                  <li>Regex, Parsing XML Payloads</li>
+                  <li>Bash Commands</li>
+                  <li>Bootstrap</li>
+
+                </ul>
+            </div>
+            <div></div>
+            <br />
+
+            <div class="section_heading">
+              <hr><br>
+              Experience:</div>
+            <div class="job_details">
+                <b>Dell Technologies</b><br />
+                Web Developer (01/2019 - present) <br />
+            </div>
+            <ul class="job_duties">
+                <li>Develop on cloud-based SaaS with JavaScript MVC architecture and RESTful APIs</li>
+                <li>Assist in development required for customized managed deployment</li>
+                <li>Developed training website for project managers who use platform </li>
+                <li>Work with project managers to determine technical resolutions for system maintenance </li>
+            </ul>
+
+            <div class="job_details">
+                <b>University of Texas (International Office) </b><br />
+                Senior Software Developer/Analyst (03/2018 - 01/2019) <br />
+            </div>
+            <ul class="job_duties">
+                <li>Maintenance of database, UI and system design, and extensive stewardship.</li>
+                <li>Convert International Scholars, ESL, and Study Abroad
+                legacy system to Python and Oracle.</li>
+                <li>Gather requirements from stakeholders, clients, and team members.</li>
+                <li>Test all changes comprehensibly, regardless of new or legacy development.</li>
+            </ul>
+
+            <div class="job_details">
+                <b>University of Texas (Office of the Registrar)</b><br />
+                Software Developer/Analyst (03/2016 - 03/2018)
+            </div>
+            <ul class="job_duties">
+                <li>Lead UT grade processing stewardship, analysis, and student records
+                semester roll over.</li>
+                <li>Maintained legacy systems.</li>
+                <li>Mentored and trained new team members.</li>
+                <li>Provided user training, documentation and support for internally
+                developed and supported applications. </li>
+            </ul>
+
+            <div class="job_details">
+                <b>University of Texas </b><br />
+                Software Developer Trainee (9/2015 - 03/2016)
+            </div>
+
+            <div class="job_details">
+                <b>East Austin College Prep</b><br />
+                Special Education Teacher and Science Tutor (01/2014 - 08/2015)
+            </div>
+                <ul class="job_duties">
+                <li>Conducted critical client and stakeholder conversations including progress reviews.</li>
+                <li>Created bilingual Spanish/English documentation of weekly activities and progress.</li>
+                <li>Developed plans based on national standards and legal requirements.</li>
+            </ul>
+
+            <div class="section_heading">Education:</div>
+            <div class="job_details">
+                University of Texas
+                B.A. in Biology, 2008 <br />
+
+            </div>
+            <div class="section_heading">Languages:</div>
+            <div class="job_details">
+                English<br />
+                Spanish<br />
+            </div>
+
+        </div>
+    </body>
+</html>

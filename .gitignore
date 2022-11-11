@@ -1,3 +1,6 @@
 local_settings.py
+<<<<<<< HEAD
 
 SECRET_KEY = 'f5mi@mbc%j^s*903n=1+z@it=7n(cpfiq7!m_a5bz)nh7r$*8)'
+=======
+>>>>>>> 699a772dd5dfdd840f88eaf7d0585eafa3c47e5b

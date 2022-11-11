@@ -1,0 +1,12 @@
+<h3>Merge and Sort Lists</h3>
+
+<form action="{% url 'merge_and_sort_lists' %}" method="GET">
+  <label for="submit">Generate two lists to sort and merge:</label>
+  <button type="submit" name="submit" value="submit">Generate</button>
+</form>
+
+{% if list %}
+  <div>List 1: {{list1}}</div>
+  <div>List 2: {{list2}}</div>
+  <div>Sorted and merged: {{ list }}
+{% endif %}

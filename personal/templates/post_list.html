@@ -1,0 +1,18 @@
+<h3>Blog Post Summaries</h3>
+
+{% if not posts %}
+  <div><a href="{% url 'post_list' %}">See some posts</a></div>
+{% endif %}
+
+{% if posts %}
+  <div><a href="{% url 'function_junction' %}">Hide the posts</a></div>
+
+  {% for post in posts %}
+    <div>
+      <h3>{{ post.title }}</h3>
+      <p style="text-align: left;">{{ post.created_date }}</p>
+      <p style="text-align: left;">{{ post.text }}</p>
+    </div>
+  {% endfor %}
+
+{% endif %}

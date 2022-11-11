@@ -1,0 +1,110 @@
+{% load static %}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-173909279-1"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'UA-173909279-1');
+    </script>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta charset="utf-8">
+
+    <script type="text/javascript" src="{% static 'js/gracestation.js' %}"></script>
+    <link rel="stylesheet" href="{% static 'css/gracestation.css' %}" />
+
+    <style>
+
+        #menu a {
+            color: #555;
+        }
+
+        #auth_form_content {
+            width: 60%;
+            margin-top: 10%;
+            margin-left: 15%;
+            text-align: center;
+            background-color: white;
+            position: fixed;
+            border: 1px black solid;
+            font-size: 16px;
+        }
+
+        label {
+          color:#555;
+          font: helvetica;
+        }
+
+        #button {
+            background-color: #777;
+            color: white;
+            padding: 16px 26px;
+            text-decoration: none;
+            margin: 4px 2px;
+            cursor: pointer;
+            border-radius: 15px;
+            }
+
+    </style>
+    <title>Grace Station</title>
+
+</head>
+
+<body>
+
+  {% if messages %}
+    {% for message in messages %}
+      {% if message.level == DEFAULT_MESSAGE_LEVELS.ERROR %}
+        <div class="error">{{message}}</div>
+      {% else %}
+        <div class="success">{{message}}</div>
+      {% endif %}
+    {% endfor %}
+  {% endif %}
+
+  <div id="menu">
+      <img id="menu_icon" onclick="toggleDisplay('menu_contents')" src="static/images/menu.svg"/>
+      <div id="menu_contents" style="display:none;">
+          <a href="{% url 'index' %}">Home</a>
+          <a href="{% url 'resume' %}">Resume</a>
+          <a href="{% url 'portfolio' %}">Portfolio</a>
+          <a href="/personal/home">Personal</a>
+      </div>
+  </div>
+
+
+    <div id="auth_form_content">
+
+        <h1>Log In</h1>
+        <p style="color: red">Input 'AnonUser' and "Mnbv1234!" if you would like to continue
+          without creating an account. </p>
+        <p>Thanks for viewing! </p>
+        <form action="/user_login" method="post">
+            <input type="hidden" name="redirect_view" value="{{ redirect_view }}" />
+            {% csrf_token %}
+            {% for field in form %}
+                <div class="fieldWrapper">
+                    {{ field.errors }}
+                    {{ field.label_tag }} {{ field }}
+                    {% if field.help_text %}
+                    <p class="help">{{ field.help_text|safe }}</p>
+                    {% endif %}
+                </div>
+            {% endfor %}
+            <br />
+            <input id="button" type="submit" value="Submit">
+        </form>
+
+        <p>Need an Account?  <a href="{% url 'user_signup' %}">Sign Up</a></p>
+
+    </div>
+
+
+</body>
+</html>

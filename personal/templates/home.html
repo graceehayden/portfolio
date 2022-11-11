@@ -1,0 +1,95 @@
+{% load static %}
+
+<!DOCTYPE html>
+
+<head>
+    <title>International Grace Station</title>
+
+    <script type="text/javascript" src="{% static 'js/coming_soon.js' %}"></script>
+    <script type="text/javascript" src="{% static 'js/gracestation.js' %}"></script>
+
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css">
+    <style>
+        body, html {
+         height: 100%
+        }
+
+        hr {
+            margin: auto;
+            width: 40%;
+        }
+
+        .bgimg {
+            height: 100%;
+            background-image: url("/static/images/fall_scene.jpg");
+            background-position: center;
+            background-size: cover;
+            position: relative;
+            font-family: "Courier New", Courier, monospace;
+            font-size: 25px;
+        }
+
+        .middle {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            text-align: center;
+        }
+
+        hr {
+            margin: auto;
+            width: 40%;
+        }
+        a {
+          display: block;
+          color: white;
+          text-decoration: none;
+        }
+        #menu_contents {
+          text-decoration: none;
+          width: auto;
+          height: auto;
+          margin-left: -215px;
+          margin-top: -50px;
+        }
+       #menu {
+          width: 40px;
+          height: auto;
+          float: right;
+          margin-right: 10px;
+          margin-top: 10px;
+        }
+
+    </style>
+
+</head>
+
+<body>
+  <div class="bgimg">
+
+    <div id="menu">
+        <img onclick="toggleDisplay('menu_contents')" src="static/images/menu.svg"/>
+        <div id="menu_contents" style="display:none;">
+          <a href="{% url 'index' %}">Home</a>
+          <a href="{% url 'resume' %}">Resume</a>
+          <a href="{% url 'portfolio' %}">Portfolio</a>
+        </div>
+    </div>
+
+    <div class="middle" style="color:white;">
+      <h1>COMING SOON</h1>
+      <hr>
+      <p id="countdown"></p>
+      <br>
+      <br>
+      <a href="{% url 'playlist' %}">Listen to My Spooky Oldies</a>
+
+    </div>
+
+  </div>
+
+</body>
+
+</html>

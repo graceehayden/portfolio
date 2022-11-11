@@ -1,0 +1,35 @@
+{% load static %}
+
+<!DOCTYPE html>
+
+<head>
+    <title>International Grace Station</title>
+
+    <script type="text/javascript" src="{% static 'js/gracestation.js' %}"></style>
+
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css">
+    <link rel="stylesheet" href="{% static 'css/gracestation.css' %}">
+</head>
+
+<body>
+  <div class="bgimg">
+
+    <div id="resume_link">
+      Grace Hayden
+      <br />
+    </div>
+
+    <div class="middle">
+      <h1><a href="{% url 'videos' %}">Family Home Videos</a></h1>
+      <hr />
+      <h1><a href="{% url 'travel_inspiration' %}">Travel Inspiration</a></h1>
+      <hr />
+      <h1><a href="{% url 'inspiration_station' %}">Inspiration Station</a></h1>
+    </div>
+
+  </div>
+
+</body>
+
+</html>

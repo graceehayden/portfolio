@@ -1,0 +1,368 @@
+{% extends 'base.html' %}
+
+  {% block content %}
+    <div  id="banner">
+      <h1>Grace Hayden's Portfolio</h1>
+    </div>
+
+    <center>
+        <div id="intro">
+          <b>* Full-stack Python/Django, JavaScript, Natural, and SQL developer * </b>
+          <br />
+          <br />
+          My favorite part of my career is the ever-changing landscape
+          and opportunity to learn. I am always seeking new and improved
+          ways to use my skills and effect positive change.
+          <br />
+          <br />
+          All of the project work included has been confidential
+          and within secure environments. Below is a descriptive compilation
+          of each.
+        </div>
+    </center>
+
+    <hr>
+
+    <div class="chapter">
+
+        <h2>The University of Texas at Austin Office of the Registrar</h2>
+        <center>
+            <button onclick="toggleDisplay('toolbox_registrar')" type="button" class="toolbox collapsible">
+              Toolbox
+            </button>
+        <div class="toolbox_details" id="toolbox_registrar">
+          <table>
+            <tr>
+              <th>PyCharm</th>
+              <td>IDE of choice</td>
+            </tr>
+            <tr>
+              <th>Mainframe/ADABAS/Natural</th>
+              <td>The university back-end. ADABAS database coded with
+                Natural language, similar to COBOL</td>
+            </tr>
+            <tr>
+              <th>Task Manager</th>
+              <td>Custom UT task manager for batch process automation</td>
+            </tr>
+            <tr>
+              <th>JCL</th>
+              <td>Output from batch processing; used in a limited capacity
+                to monitor batch results and debug errors
+              </td>
+            </tr>
+            <tr>
+              <th>Pype</th>
+              <td>Custom UT application development environment.
+                Applications on PyPE can access to TEST, QUAL, and PROD
+                environments on the mainframe and SQL databases,
+                allowing legacy maintenance as well as
+                new applications that do not rely on the mainframe with code
+                drawn from repositories in the UT Austin private instance of GitHub.
+                It also provides a virtual machine for setup of
+                developer workstations and easy installation of the UTDirect
+                framework.
+              </td>
+            </tr>
+            <tr>
+              <th>UTDirect</th>
+              <td>Framework for consistent user experience, as well as
+              easy incorporation of Apollo.</td>
+            </tr>
+            <tr>
+              <th>Apollo</th>
+              <td>The university's in-house identity and access management tool.</td>
+            </tr>
+            <tr>
+              <th>WebAgent</th>
+              <td>The university's in-house front-end programming language
+                  built to complement its back-end language, Natural.</td>
+            </tr>
+            <tr>
+              <th>Git and Github</th>
+              <td>Version Control</td>
+            </tr>
+            <tr>
+              <th>Jira</th>
+              <td>Task assignment and project management</td>
+            </tr>
+            <tr>
+              <th>Visio</th>
+              <td>Flowcharting, ERDs</td>
+            </tr>
+          </table>
+        </div>
+        </center>
+
+        <center>
+            <button onclick="toggleDisplay('crin')" type="button" class="project_title collapsible">
+              Modernized Online Course Inventory
+            </button>
+        </center>
+        <div class="project_details" id="crin">
+          <p><b>Background: </b>The university of Texas operates with a homegrown system
+            and a highly customized stack of in-house tools and frameworks.
+            </p>
+
+          <p><b>The project:</b> Adding a modernized, Python/Django front end to
+            the legacy mainframe course inventory system. </p>
+
+          <p><b>The legacy system:</b>
+            The back end is a mainframe coded with Natural/ADABAS, a
+            procedural language similar to COBOL.
+            Up until 2016, the only way for registrar employees to view the
+            course inventory was using a maiframe interface.
+            Coding the programs that ran each of the
+            mainframe interfaces was a skill of its own.
+            An example of the legacy system is pictured.</p>
+
+          <img src="static/images/179_grades_in.PNG" />
+
+          <p><b>The new system:</b> A familiar interface designed with
+            Python and Django, greatly expanding the functionality available to users,
+            including a variety of search parameters for the course listing,
+            drilldown behavior to view to course details from the listing,
+            a comparison function to view and compare
+            semester data for a single course, and a change log.
+            The back end remained on the mainframe as the registrar's data
+            needed to remain accessible to all other departments while systems were
+            being moved off of the mainframe campus-wide. The change log required
+            a new ADABAS file, which underwent a design and approval process
+            before its creation.
+          </p>
+
+          <div class="tooltip">
+              <img src="static/images/Course_Inventory_Home_Page.PNG" />
+                <div class="tooltiptext">
+                  The new course inventory home page. Improvements:
+                  <ul>
+                      <li>More search parameters</li>
+                      <li>Modernized, user friendly</li>
+                      <li>Filters available</li>
+                      <li>Form input is scrubbed to display informative
+                      errors to user</li>
+                      <li>Drilldown behavior to view course details from listing</li>
+                  </ul>
+                </div>
+          </div>
+
+          <div class="tooltip">
+              <img src="static/images/CRIN_Semester_Comparison.PNG" />
+              <div class="tooltiptext"> Course Semester Comparison.
+                <ul>
+                    <li>Compare details of a course from one semester to another.</li>
+                    <li>Differences would be highlighted.</li>
+                    <li>Easy navigation between semesters displayed.</li>
+                    <li>A summary of changed fields to look for is
+                      provided at the top.</li>
+                </ul>
+              </div>
+          </div>
+
+          <div class="tooltip">
+              <img src="static/images/CRIN_Change_Log.PNG" />
+              <div class="tooltiptext">
+                The new course inventory home page. Improvements: <br />
+                <ul>
+                    <li>More search parameters</li>
+                    <li>Modernized, user friendly</li>
+                    <li>Filters available</li>
+                    <li>Form input scrubbed </li>
+                </ul>
+              </div>
+          </div>
+        </div>
+
+        <center>
+            <button onclick="toggleDisplay('grades')" class="project_title collapsible">
+              Stewardship of the University Grades Codebase
+            </button>
+        </center>
+        <div class="project_details" id="grades">
+          <p><b>Background:</b>The legacy system keeping the university
+            grades process running smoothly is a combination of batch
+            processing, web interfaces, and mainframe programs. Some of the
+            programs date back to the mid 80's (one was older than I am),
+            making the system among the more brittle at the university,
+            as upgrades or changes must be made with care not to
+            disrupt functionality.
+          </p>
+
+          <p>It is the job of the grades steward to stay on the last day
+            of the semester, when all grades have been turned in, to
+            run the series of batch programs that store students' grades
+            and, ultimately, switch the whole university onto the next semester.
+            The process is overseen in a conference room and any errors
+            due to unforseen data abnormalities are debugged on the spot.
+          </p>
+
+          <p>Upkeep of the grades codebase is a challenge, when the code needs to
+            work with technologies it was built on, while also being managed
+            withint the evolving technological landscape that requires
+            continuous integration. </p>
+
+          <div class="tooltip">
+              <img src="static/images/CC_nrrecq_screen.PNG" />
+              <div class="tooltiptext">
+                  View of grade submissions for a single class.
+              </div>
+          </div>
+          <div class="tooltip">
+              <img src="static/images/CD_nrrecq_screen.PNG" />
+              <div class="tooltiptext">
+                  View of program listing status of grade submissions by class.
+              </div>
+          </div>
+          <div class="tooltip">
+              <img src="static/images/179_LW_screen.PNG" />
+              <div class="tooltiptext">
+                  View of program that calculates percentages of total
+                  grades submitted university-wide so far.
+              </div>
+          </div>
+
+          <p><b>Maintenance Task Examples:</b>
+            <ul style="color: #777;">
+              <li>Addition of new fields to legacy mainframe files </li>
+              <li>Updates to programs behing legacy mainframe interfaces </li>
+              <li>Maintenance of web interfaces with WebAgent</li>
+              <li>Added subprograms to existing batch programs
+                for integrations with other departments and vendor products.</li>
+              <li>Finding all programs that call a subprogram that has been
+                updated and recompiled so they can all be recompiled, as well.
+              </li>
+              <li>
+                  <div class="tooltip">
+                      <b><u>Create migration profiles</b></u>
+                      <div class="tooltiptext" style="width: 800px; height: auto; margin-top: -40%; margin-left: 30%;">
+                        <img src="static/images/migration_profile.png" />
+                      </div>
+                    for all programs that will be
+                    moved to production with a change and which will need to be
+                    recatalogued as a result of the changes.
+                  </div>
+            </ul>
+          </p>
+        </div>
+
+    </div>
+
+    <hr>
+
+    <div class="chapter">
+
+        <h2>The University of Texas at Austin International Office</h2>
+
+        <center>
+            <button onclick="toggleDisplay('toolbox_io')" type="button" class="toolbox collapsible">
+              Toolbox
+            </button>
+        <div class="toolbox_details" id="toolbox_io">
+          <table>
+              <tr>
+                <th>Same as above</th>
+                <td>See Registrar Tools</td>
+              </tr>
+              <tr>
+                <th>Oracle/SQL</th>
+                <td>Replacement for ADABAS/Natural back-end.</td>
+              </tr>
+              <tr>
+                <th>Microsoft SQL Server</th>
+                <td>Server Maintenance.</td>
+              </tr>
+          </table>
+        </div>
+        </center>
+
+        <center>
+            <button onclick="toggleDisplay('study_abroad')" class="project_title collapsible">
+              Redesign of Study Abroad Portal
+            </button>
+        </center>
+        <div class="project_details" id="study_abroad">
+          <p><b>Background: </b>The study abroad interface was created when
+          WebAgent was a commonly used language on campus. WebAgent had been
+          phased out of new projects in favor of Python for some time, which
+          makes maintenance cumbersome and difficult when few know how to
+          work with it.
+          </p>
+
+          <p><b>The project:</b> The portal redesign began with weekly meetings
+          between the heads of the study abroad program and the developers
+          for the purpose of gathering requirements. </p>
+
+        </div>
+
+    </div>
+
+    <hr>
+
+    <div class="chapter">
+
+        <h2>Dell Technologies</h2>
+        <center>
+            <button onclick="toggleDisplay('toolbox_dell')" type="button" class="toolbox collapsible">
+              Toolbox
+            </button>
+
+            <div class="toolbox_details" id="toolbox_dell">
+              <table>
+                <tr>
+                  <th>QuickBase</th>
+                  <td>Software platform. A Dell instance has been customized and
+                    is cloned to create individual project instances that are
+                    further customized to each project's requirements. </td>
+                </tr>
+                <tr>
+                  <th>VBA</th>
+                  <td>Excel workbooks used for import/export of application data</td>
+                </tr>
+                <tr>
+                  <th>Notepad</th>
+                  <td>IDE of choice</td>
+                </tr>
+              </table>
+            </div>
+        </center>
+
+        <center>
+            <button onclick="toggleDisplay('quickbase')" class="project_title collapsible">
+              Augmentation of SaaS Functionality for Custom Applications
+            </button>
+        </center>
+        <div  class="project_details" id="quickbase">
+          <p><b>Background: </b>
+          </p>
+
+          <p><b>The project:</b>.</p>
+
+        </div>
+
+        <center>
+            <button onclick="toggleDisplay('documentation')" class="project_title collapsible">
+              Legacy Systems Documentation
+            </button>
+        </center>
+        <div  class="project_details" id="documentation">
+          <p><b>Background: </b>
+          </p>
+
+          <p><b>The project:</b>.</p>
+
+        </div>
+
+        <center>
+            <button onclick="toggleDisplay('training_suite')" class="project_title collapsible">
+              Training Suite
+            </button>
+        </center>
+        <div  class="project_details" id="training_suite">
+          <p><b>Background: </b></p>
+
+          <p><b>The project:</b>.</p>
+
+        </div>
+
+    </div>
+    {% endblock %}

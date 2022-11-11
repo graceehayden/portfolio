@@ -1,0 +1,3 @@
+local_settings.py
+
+SECRET_KEY = 'f5mi@mbc%j^s*903n=1+z@it=7n(cpfiq7!m_a5bz)nh7r$*8)'
