@@ -1,3 +1,16 @@
+<<<<<<< HEAD
+#contact_info {
+
+}
+
+#resume_title {
+  text-align: center;
+  font-weight: bold;
+}
+
+.section_heading {
+  font-weight: bold;
+=======
 body {
   background-color: #58404c;
 }
@@ -40,10 +53,13 @@ li {
 .column3 {
   float: left;
   width: 30%;
+>>>>>>> 699a772dd5dfdd840f88eaf7d0585eafa3c47e5b
 }
 
 .job_details .job_duties {
   margin-left: 10%;
+<<<<<<< HEAD
+=======
   font-size: 14px;
 }
 
@@ -117,4 +133,5 @@ li {
   font-family: "Courier New", Courier, monospace;
   font-size: 20px;
   display: block;
+>>>>>>> 699a772dd5dfdd840f88eaf7d0585eafa3c47e5b
 }
