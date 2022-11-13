@@ -82,5 +82,4 @@ def videos(request):
 
 
 def hello_pallet(request):
-    posts = Post.objects.order_by('published_date')
-    return render(request, 'hello_pallet.html', {'posts': posts})
+    return render(request, 'hello_pallet.html')
