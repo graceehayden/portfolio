@@ -1,88 +1,49 @@
+{% load static %}
+
 <!DOCTYPE html>
 
-<style>
-
-  body {
-      background-image: url('https://i.imgur.com/e2LQLNi.png');
-      background-attachment: fixed; /* make sure that the background image stays put even when the user scrolls */
-      background-repeat: no-repeat;
-      height: 100%;
-      background-position: center center;
-      background-size: cover; /* image scales based on the container's size */
-      position: relative;
-  }
-
-  .middle {
-      color: white;
-      font-family: "Courier New", Courier, monospace;
-      font-size: 25px;
-      position: absolute;
-      margin-top: 20%;
-      left: 50%;
-      transform: translate(-50%, -50%);
-      text-align: center;
-  }
-
-  .topleft {
-      position: absolute;
-      top: 0;
-      left: 16px;
-  }
-
-  .bottomleft {
-      position: absolute;
-      bottom: 0;
-      left: 16px;
-  }
-</style>
+<html>
 
 <head>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-173909279-1"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'UA-173909279-1');
+    </script>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
     <title>International Grace Station</title>
+
+    <script type="text/javascript" src="{% static 'js/gracestation.js' %}"></script>
+    <script type="text/javascript" src="{% static 'js/coming_soon.js' %}"></script>
+
     <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
     <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css">
-    <link rel="stylesheet" href="{% static 'css/coming_soon.css' %}">
+    <link rel="stylesheet" href="{% static 'css/index.css' %}">
 </head>
 
 <body>
-    <div class="middle">
-      <h1>COMING SOON</h1>
-      <hr>
-      <p id="demo"></p>
+
+  <div class="bgimg">
+
+    <div id="resume_link">
+      International Grace Station
     </div>
 
+    <div class="middle">
+      <h1><a href="{% url 'resume' %}">Resume</a></h1>
+      <hr >
+      <h1><a href="{% url 'portfolio' %}">Portfolio</a></h1>
+      <hr >
+      <h1><a href="/personal/home">Personal</a></h1>
+    </div>
+
+
+  </div>
 </body>
-
-<script type="text/javascript" src="coming_soon.js"></script>
-<script>
-  // Set the date we're counting down to
-  var countDownDate = new Date("Oct 15, 2019 15:00:00").getTime();
-
-  // Update the count down every 1 second
-  var x = setInterval(function() {
-
-    // Get today's date and time
-    var now = new Date().getTime();
-
-    // Find the distance between now and the count down date
-    var distance = countDownDate - now;
-
-    // Time calculations for days, hours, minutes and seconds
-    var days = Math.floor(distance / (1000 * 60 * 60 * 24));
-    var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-    var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
-    var seconds = Math.floor((distance % (1000 * 60)) / 1000);
-
-    // Display the result in an element with id="demo"
-    document.getElementById("demo").innerHTML = days + "d " + hours + "h "
-    + minutes + "m " + seconds + "s ";
-
-    // If the count down is finished, write some text
-    if (distance < 0) {
-      clearInterval(x);
-      document.getElementById("demo").innerHTML = "COMING SOON";
-    }
-  }, 1000);
-
-</script>
 
 </html>

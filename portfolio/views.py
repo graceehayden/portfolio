@@ -72,10 +72,11 @@ def resume(request):
 
 
 def portfolio(request):
-    if request.user.is_active:
-        return render(request, 'portfolio.html', {})
-    else:
-        return redirect('user_login')
+    return render(request, 'portfolio.html', {})
+    # if request.user.is_active:
+    #     return render(request, 'portfolio.html', {})
+    # else:
+    #     return redirect('user_login')
 
 
 def inspiration_station(request):
