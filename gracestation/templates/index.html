@@ -1,0 +1,48 @@
+{% load static %}
+
+<!DOCTYPE html>
+
+<html>
+
+<head>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-173909279-1"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'UA-173909279-1');
+    </script>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>International Grace Station</title>
+
+    <script type="text/javascript" src="{% static 'js/gracestation.js' %}"></script>
+
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css">
+    <link rel="stylesheet" href="{% static 'css/index.css' %}">
+</head>
+
+<body>
+
+  <div class="bgimg">
+
+    <div id="resume_link">
+      International Grace Station
+    </div>
+
+    <div class="middle">
+      <h1><a href="{% url 'resume' %}">Resume</a></h1>
+      <hr >
+      <h1><a href="{% url 'portfolio' %}">Portfolio</a></h1>
+      <hr >
+      <h1><a href="/personal/home">Personal</a></h1>
+    </div>
+
+
+  </div>
+</body>
+
+</html>
