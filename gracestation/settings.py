@@ -113,8 +113,6 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/2.1/howto/static-files/
 
 STATIC_URL = '/static/'
-STATIC_ROOT = os.path.join(BASE_DIR, 'gracestation/static')
-# Additional locations of static files
-STATICFILES_DIRS = ('portfolio/gracestation/static/',)
+STATIC_ROOT = os.path.join(BASE_DIR, 'static')
 # automatic compression, no caching
 STATICFILES_STORAGE = "whitenoise.storage.CompressedStaticFilesStorage"
