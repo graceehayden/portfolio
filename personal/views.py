@@ -52,8 +52,6 @@ def playlist(request):
     songs = Song.objects.all()
 
     songs_delete = []
-    # songs_delete = Song.objects.filter(title="I Can Dream")
-    # songs_delete.delete()
     songs_dict = {}
     for song in songs:
         title = song.title
