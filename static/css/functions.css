@@ -1,0 +1,34 @@
+
+body {
+  background-color: #27534e;
+}
+
+h2 {
+  color: #27534e;
+}
+
+.container {
+  width: 40%;
+  border: solid 1px;
+  background-color: #cce7db;
+  padding: 15px;
+  margin: 15px;
+}
+
+.success {
+  font-weight: bold; color: green;
+}
+.negative {
+  font-weight: bold; color: blue;
+}
+.blank {
+  font-weight: bold; color: red;
+}
+
+#function_index{
+  width: 80%;
+  height: 100%;
+  margin-top: 20px;
+  border: solid 1px;
+  background-color: white;
+}
