@@ -12,7 +12,6 @@ urlpatterns = [
     path('user_signup', views.user_signup, name='user_signup'),
     path('signout', views.signout, name="signout"),
     path('resume', views.resume, name='resume'),
-    # path('portfolio', views.portfolio, name='portfolio'),
     path('inspiration_station', views.inspiration_station, name='inspiration_station'),
     path('function_junction/', views.function_junction, name='function_junction'),
     path('function_junction/palindromes', views.palindromes, name='palindromes'),

@@ -35,7 +35,6 @@ def user_signup(request):
         return render(request, 'user_signup.html', {'form': form,
                                                     })
 
-
 def user_login(request):
     if "login" in request.GET:
         return render(request, 'portfolio.html', {})
@@ -102,21 +101,3 @@ def merge_and_sort_lists(request):
     return render(request, 'function_junction.html', {'list': list,
                                                       'list1': list1,
                                                       'list2': list2})
-
-
-def error(request):
-    return render(request, 'error.html', {})
-
-
-def handler404(request, *args, **argv):
-   response = render(request, 'error.html',
-                                 context_instance=RequestContext(request))
-   response.status_code = 404
-   return response
-
-
-# def handler500(request, *args, **argv):
-#    response = render(request, 'error.html',
-#                                  context_instance=RequestContext(request))
-#    response.status_code = 500
-#    return response
