@@ -12,4 +12,4 @@ urlpatterns = [
     path('playlist', views.playlist, name='playlist'),
     path('videos', views.videos, name='videos'),
     path('hello_pallet', views.hello_pallet, name='hello_pallet'),
-]
+] + staticfiles_urlpatterns() + static(settings.MEDIA_URL, document_root= settings.MEDIA_ROOT)
