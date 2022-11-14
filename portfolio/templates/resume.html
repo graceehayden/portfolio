@@ -12,14 +12,14 @@
           gtag('config', 'UA-173909279-1');
         </script>
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <script type="text/javascript" src="{% static '/js/gracestation.js' %}"></script>
-        <link rel="stylesheet" href="{% static '/portfolio/css/resume_style.css' %}">
+        <script type="text/javascript" src="{% static 'js/gracestation.js' %}"></script>
+        <link href="{% static 'css/resume_style.css' %}" rel="stylesheet">
 
         <title>Grace Hayden</title>
     </head>
     <body>
         <div id="menu">
-          <img id="menu_icon" alt="Menu icon" onclick="toggleDisplay('menu_contents')" src="static/images/menu.svg">
+          <img id="menu_icon" onclick="toggleDisplay('menu_contents')" src="gracestation/static/images/menu.svg">
           <div id="menu_contents" style="display:none;">
             <a href="{% url 'index' %}">Home</a>
             <a href="{% url 'resume' %}">Resume</a>

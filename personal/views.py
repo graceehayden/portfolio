@@ -59,7 +59,6 @@ def playlist(request):
         title = song.title
         file = song.songfile
         songs_dict.update( {title : file.url} )
-    print(songs_dict)
     return render(request, 'playlist.html', {'songs': songs_dict })
 
 
