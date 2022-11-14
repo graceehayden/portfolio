@@ -28,6 +28,16 @@ li {
   clear: left;
 }
 
+#skills_container {
+  display: flex;
+}
+
+@media screen and (max-width: 700px) {
+  #skills_container {
+    flex-direction: column;
+  }
+}
+
 .column1 {
   float: left;
   width: 30%;
@@ -41,6 +51,7 @@ li {
 .column3 {
   float: left;
   width: 30%;
+  margin-right: 0;
 }
 
 .job_details .job_duties {
