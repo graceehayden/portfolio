@@ -21,6 +21,6 @@ var x = setInterval(function() {
     // If the count down is done, write some text
     if (distance < 0) {
       clearInterval(x);
-      document.getElementById("countdown").innerHTML = "COMING SOON";
+      document.getElementById("countdown").innerHTML = "COMING BOOP!";
       }
 }, 1000);

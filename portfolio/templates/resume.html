@@ -1,6 +1,6 @@
-{% load static %}
-
 <!DOCTYPE html>
+{% load static %}
+<html lang="en">
     <head>
         <!-- Global site tag (gtag.js) - Google Analytics -->
         <script async src="https://www.googletagmanager.com/gtag/js?id=UA-173909279-1"></script>
@@ -12,14 +12,14 @@
           gtag('config', 'UA-173909279-1');
         </script>
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <script type="text/javascript" src="{% static 'js/gracestation.js' %}"></script>
-        <link rel="stylesheet" href="{% static 'css/resume_style.css' %}">
+        <script type="text/javascript" src="{% static '/js/gracestation.js' %}"></script>
+        <link rel="stylesheet" href="{% static '/portfolio/css/resume_style.css' %}">
 
         <title>Grace Hayden</title>
     </head>
     <body>
         <div id="menu">
-          <img id="menu_icon" onclick="toggleDisplay('menu_contents')" src="static/images/menu.svg"/>
+          <img id="menu_icon" alt="Menu icon" onclick="toggleDisplay('menu_contents')" src="static/images/menu.svg">
           <div id="menu_contents" style="display:none;">
             <a href="{% url 'index' %}">Home</a>
             <a href="{% url 'resume' %}">Resume</a>
@@ -30,19 +30,19 @@
 
         <div id="content">
             <div id="contact_info">
-            Grace E. Hayden <br /> <br />
-            GraceEHayden@gmail.com <br /><br />
+              Grace E. Hayden <br><br>
+              GraceEHayden@gmail.com <br><br>
             </div>
 
-            <hr />
+            <hr>
 
             <div id="resume_title">
                 <h1>Full-Stack Software Developer</h1>
             </div>
 
-            <hr />
+            <hr>
 
-            <div class="section_heading">Skills / Expertise :</div>
+            <div class="section_heading">Skills:</div>
             <div class="column1">
                 <ul>
                     <li onMouseOver="show('python')" onMouseOut="hide('python')">
@@ -84,7 +84,6 @@
                   <li>Batch Processing and Task Management</li>
                     <li>MVC Architecture </li>
                     <li>Documentation and ERDs</li>
-                    <li>Jenkins, Lighthouse, Rancher</li>
                 </ul>
             </div>
             <div class="column3">
@@ -93,17 +92,18 @@
                   <li>Jira</li>
                   <li>Scrum Methodologies</li>
                   <li>Google Analytics</li>
+                  <li>Jenkins, Lighthouse, Rancher</li>
                 </ul>
             </div>
             <div></div>
-            <br />
+            <br>
 
             <div class="section_heading">
               <hr><br>
               Experience:</div>
               <div class="job_details">
-                  <b>Planned Parenthood Federation of America</b><br />
-                  Software Developer (10/2020 - present) <br />
+                  <b>Planned Parenthood Federation of America</b><br>
+                  Software Developer (10/2020 - present) <br>
               </div>
               <ul class="job_duties">
                   <li>Build on path to care and learn applications (Django CMS + Vue).</li>
@@ -112,8 +112,8 @@
               </ul>
 
             <div class="job_details">
-                <b>Dell Technologies</b><br />
-                Web Developer (01/2019 - 10/2020) <br />
+                <b>Dell Technologies</b><br>
+                Web Developer (01/2019 - 10/2020) <br>
             </div>
             <ul class="job_duties">
                 <li>Gathered technical requirements and deliver customized managed deployment project applications.</li>
@@ -123,8 +123,8 @@
             </ul>
 
             <div class="job_details">
-                <b>University of Texas (International Office) </b><br />
-                Senior Software Developer/Analyst (03/2018 - 01/2019) <br />
+                <b>University of Texas (International Office) </b><br>
+                Senior Software Developer/Analyst (03/2018 - 01/2019) <br>
             </div>
             <ul class="job_duties">
                 <li>Gathered requirements from stakeholders, clients, and team members.</li>
@@ -135,7 +135,7 @@
             </ul>
 
             <div class="job_details">
-                <b>University of Texas (Office of the Registrar)</b><br />
+                <b>University of Texas (Office of the Registrar)</b><br>
                 Software Developer/Analyst (9/2015 - 03/2018)
             </div>
             <ul class="job_duties">
@@ -148,7 +148,7 @@
             </ul>
 
             <div class="job_details">
-                <b>East Austin College Prep</b><br />
+                <b>East Austin College Prep</b><br>
                 Special Education Teacher and Science Tutor (01/2014 - 08/2015)
             </div>
                 <ul class="job_duties">
@@ -160,21 +160,21 @@
             <div class="section_heading">Education:</div>
             <div class="job_details">
                 University of Texas
-                B.A. in Biology, 2008 <br />
+                B.A. in Biology, 2008 <br>
             </div>
 
             <div class="section_heading">Other Interests:</div>
             <div class="job_details">
-                Dreamtime Animal Sanctuary (weekly volunteer, since August 2019) <br />
+                Dreamtime Animal Sanctuary (weekly volunteer, 2019-2020) <br>
                 Those Texas Women - fundraising organization for the ACLU,
                 Planned Parenthood, and Casa Marianella (cofounder, 2016-2018)
             </div>
 
             <div class="section_heading">Languages:</div>
             <div class="job_details">
-                English<br />
-                Spanish<br />
-                Dutch (beginner)<br />
+                English<br>
+                Spanish<br>
+                Dutch (beginner)<br>
             </div>
         </div>
     </body>
