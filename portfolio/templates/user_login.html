@@ -83,9 +83,6 @@
     <div id="auth_form_content">
 
         <h1>Log In</h1>
-        <p style="color: red">Input 'AnonUser' and "Mnbv1234!" if you would like to continue
-          without creating an account. </p>
-        <p>Thanks for viewing! </p>
         <form action="/user_login" method="post">
             <input type="hidden" name="redirect_view" value="{{ redirect_view }}" />
             {% csrf_token %}
@@ -100,6 +97,12 @@
             {% endfor %}
             <br />
             <input id="button" type="submit" value="Submit">
+            <p style="color: red;">
+              Click <a href="?login=False">here</a>
+              if you would like to continue without
+              creating an account.
+            </p>
+            <p>Thanks for viewing! </p>
         </form>
 
         <p>Need an Account?  <a href="{% url 'user_signup' %}">Sign Up</a></p>

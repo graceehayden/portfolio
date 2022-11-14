@@ -37,7 +37,8 @@ def user_signup(request):
 
 
 def user_login(request):
-    # redirect_view = str(request.POST.get('redirect_view'))
+    if "login" in request.GET:
+        return render(request, 'portfolio.html', {})
     if request.method == 'POST':
         form = AuthenticationForm(request=request, data=request.POST)
         if form.is_valid():
@@ -50,12 +51,10 @@ def user_login(request):
                 return redirect('portfolio')
             else:
                 messages.error(request, "Invalid username or password.")
-        else:
-            messages.error(request, "Invalid username or password.")
     form = AuthenticationForm()
     return render(request = request,
-                    template_name = "user_login.html",
-                    context={"form":form})
+                  template_name = "user_login.html",
+                  context={"form":form})
 
 
 def signout(request):
@@ -71,12 +70,12 @@ def resume(request):
     return render(request, 'resume.html', {})
 
 
-def portfolio(request):
+def portfolio(request, login=True):
     return render(request, 'portfolio.html', {})
-    # if request.user.is_active:
-    #     return render(request, 'portfolio.html', {})
-    # else:
-    #     return redirect('user_login')
+    if request.user.is_active or login == False:
+        return render(request, 'portfolio.html', {})
+    else:
+        return redirect('user_login')
 
 
 def inspiration_station(request):
@@ -109,11 +108,11 @@ def error(request):
     return render(request, 'error.html', {})
 
 
-#def handler404(request, *args, **argv):
-#    response = render(request, 'error.html',
-#                                  context_instance=RequestContext(request))
-#    response.status_code = 404
-#    return response
+def handler404(request, *args, **argv):
+   response = render(request, 'error.html',
+                                 context_instance=RequestContext(request))
+   response.status_code = 404
+   return response
 
 
 # def handler500(request, *args, **argv):
