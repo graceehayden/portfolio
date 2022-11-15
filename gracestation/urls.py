@@ -7,7 +7,7 @@ from django.conf import settings
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('', views.index, name='index'),
+    path('', views.Index.as_view(), name="index"),
     path('portfolio/', include('portfolio.urls')),
     path('personal/', include('personal.urls')),
 ] + static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)

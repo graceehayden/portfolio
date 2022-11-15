@@ -1,19 +1,19 @@
 from django.shortcuts import render, redirect
+from django.views import View
 from django.contrib import messages
-from django.utils import timezone
-from django.template import RequestContext
 from .forms import *
 from .models import *
-from .functions import handle_uploaded_file
-import random
 
 
 AUDIO_FILE_TYPES = ['mp3', 'wav']
 
 
-def home(request):
-    ''' Home page '''
-    return render(request, 'home.html', {})
+class Home(View):
+    def get(self, request):
+        return render(request, 'home.html', {})
+
+
+###################################
 
 
 def inspiration_station(request):

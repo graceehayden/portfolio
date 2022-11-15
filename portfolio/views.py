@@ -1,19 +1,27 @@
 from django.shortcuts import render, redirect
+from django.views import View
 from django.contrib.auth import authenticate, login
 from django.contrib.auth.forms import UserCreationForm, AuthenticationForm
 from django.contrib.auth import logout
 from django.contrib import messages
 from django.utils import timezone
-from django.template import RequestContext
 from .models import *
 from .functions import *
 from .forms import *
 import random
 
 
-def index(request):
-    ''' Home page '''
-    return render(request, 'index.html', {})
+class Portfolio(View):
+    def get(self, request):
+        return render(request, 'portfolio.html', {})
+
+
+class Resume(View):
+    def get(self, request):
+        return render(request, 'resume.html', {})
+
+
+###########################
 
 
 def user_signup(request):
@@ -56,25 +64,15 @@ def user_login(request):
                   context={"form":form})
 
 
+    # if request.user.is_active or login == False:
+    #     return render(request, 'portfolio.html', {})
+    # else:
+    #     return redirect('user_login')
+
+
 def signout(request):
     logout(request)
     return redirect('index')
-
-
-def coming_soon(request):
-    return render(request, 'coming_soon.html', {})
-
-
-def resume(request):
-    return render(request, 'resume.html', {})
-
-
-def portfolio(request, login=True):
-    return render(request, 'portfolio.html', {})
-    if request.user.is_active or login == False:
-        return render(request, 'portfolio.html', {})
-    else:
-        return redirect('user_login')
 
 
 def inspiration_station(request):
