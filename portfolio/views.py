@@ -1,5 +1,5 @@
 from django.shortcuts import render, redirect
-from django.views import View
+from django.views.generic import TemplateView
 from django.contrib.auth import authenticate, login
 from django.contrib.auth.forms import UserCreationForm, AuthenticationForm
 from django.contrib.auth import logout
@@ -11,14 +11,12 @@ from .forms import *
 import random
 
 
-class Portfolio(View):
-    def get(self, request):
-        return render(request, 'portfolio.html', {})
+class Portfolio(TemplateView):
+    template_name = 'portfolio.html'
 
 
-class Resume(View):
-    def get(self, request):
-        return render(request, 'resume.html', {})
+class Resume(TemplateView):
+    template_name = 'resume.html'
 
 
 ###########################
@@ -73,10 +71,6 @@ def user_login(request):
 def signout(request):
     logout(request)
     return redirect('index')
-
-
-def inspiration_station(request):
-    return render(request, 'coming_soon.html', {})
 
 
 def function_junction(request):

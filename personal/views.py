@@ -1,5 +1,5 @@
 from django.shortcuts import render, redirect
-from django.views import View
+from django.views.generic import TemplateView
 from django.contrib import messages
 from .forms import *
 from .models import *
@@ -8,25 +8,27 @@ from .models import *
 AUDIO_FILE_TYPES = ['mp3', 'wav']
 
 
-class Home(View):
-    def get(self, request):
-        return render(request, 'home.html', {})
+class Home(TemplateView):
+    template_name = 'home.html'
 
 
 ###################################
 
 
-def inspiration_station(request):
-    return render(request, 'home.html', {})
-
-
-def travel_inspiration(request):
-    return render(request, 'travel_inspiration.html', {})
-
-
 def post_list(request):
     posts = Post.objects.order_by('published_date')[:3]
     return render(request, 'function_junction.html', {'posts': posts})
+
+# class UploadSong(View):
+#     def get(self, request, pk):
+#         task = Task.objects.get(id=pk)
+#         context = {'task':task}
+#         return render(request, 'base/delete.html', context)
+#
+#     def post(self, request, pk):
+#         task = Task.objects.get(id=pk)
+#         task.delete()
+#         return redirect('tasks')
 
 
 def upload_song(request):
